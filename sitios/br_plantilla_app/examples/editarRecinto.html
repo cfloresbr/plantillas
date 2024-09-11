@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../js/vendor/Datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../js/vendor/bootstrap-select/css/bootstrap-select.min.css" type="text/css" />
+
+
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar ">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="../examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="../examples/index.html">
+  <img class="logobase" src="../img/logo-BR.png">
+  <img class="logosimple" src="../img/logo-simple-BR.png">
+</a>
+
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <div class="ms-auto me-0 me-md-3 my-2 my-md-0">
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw me-1 me-2"></i>Nombre Apellido</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#!"><i class="fas fa-key me-2"></i>Cambiar contraseña</a></li>
+        <li><a class="dropdown-item" href="#!"><i class="fas fa-user-lock me-2"></i>Preguntas de seguridad</a></li>
+        <!--<li><hr class="dropdown-divider" /></li>-->
+        <li><a class="dropdown-item" href="#!"><i class="fas fa-door-open me-2"></i>Salir</a></li>
+    </ul>
+</li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/form1.html">Inputs</a>
+                                <a class="nav-link submenu-opcion" href="../examples/buscador.html">Buscador</a>
+                                <a class="nav-link submenu-opcion" href="../examples/form2.html">Detalle</a>
+                            </nav>
+                        </div>
+                        <!--<a class="nav-link menu-opcion" href="../examples/autoAyuda.html">
+                            <i class="fas fa-question-circle sb-nav-link-icon"></i>
+                            <span class="text-sidebar">AutoAyuda</span>
+                        </a>-->
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Interface</div> -->
+
+                        <!--Principal con submenu
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>                                
+                            <span class="text-sidebar">Diseños</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>-->
+                        <!--Submenu
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="layout-static.html">Navegación estática</a>
+                                    <a class="nav-link submenu-opcion" href="layout-sidenav-light.html">Ligero desplazamiento</a>
+                                </nav>
+                            </div>-->
+
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Addons</div> -->
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/tabla-mantenedor.html">Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="../examples/tables.html">Tablas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/datatables.html">DataTables</a>
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/listadoRegion.html">Ejemplo registros</a>
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    Operaciones
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/crearRegion.html">Crear</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/editarRegion.html">Editar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/eliminarRegion.html">Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/desactivarRegion.html">Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/modales.html">Modales</a>
+                                <a class="nav-link submenu-opcion" href="../examples/modales-operaciones.html">Alertas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/autoAyuda.html">Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/acordeon.html">Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="../examples/pestanas.html">Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/login.html">Login</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_fail.html">Login error</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/recuperar-clave.html">Recuperar
+                                            Clave</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_secreta.html">Pregunta
+                                            secreta</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_contrasena.html">Cambio
+                                            password</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_cambio_ok.html">Cambio
+                                            correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                            class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/sesion-caducada.html">Sesión
+                                            caducada</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/404.html">Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento.html">Mantenimiento</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento-nobr.html">Mantenimiento No BR</a>                                                
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link submenu-opcion" href="../examples/ayuda.html">Ayuda</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Un servicio de</span>
+                    <img src="../img/logo-BR-vertical.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title d-flex justify-content-between">
+                            <h1 class="h1-aplicaciones-br">Editar ipsum</h1>
+
+                        </div>
+
+                        <div class="contenedor mt-4">
+                            <form class="" enctype="multipart/form-data" id="" method="post">
+
+                                <div class="row no-gutters align-items-center  m-4">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionInformacion">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseIdentificacion" aria-expanded="true"
+                                                        aria-controls="collapseIdentificacion">
+                                                        Identificación
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseIdentificacion"
+                                                    class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionInformacion">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                            <!-- Contenido aquí -->
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                  >Tipo recinto</label>
+                                                                <select class="form-select ">
+                                                                    <option selected="selected" value="1">Biblioteca
+                                                                        Pública</option>
+                                                                    
+                                                                </select>
+                                                                
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Código recinto</label>
+                                                                <input
+                                                                    class="form-control " type="text"
+                                                                    value="027 BC1">
+                                                                
+                                                            </div>
+                                                            <div  class="mb-3">
+                                                                <label class="form-label">Nombre interno</label>
+                                                                <input class="form-control" type="text"
+                                                                    value="Carlos María Sayago">
+                                                            </div>
+
+                                                            <div id="NomRec" class="mb-3">
+                                                                <label class="form-label">Nombre del
+                                                                    recinto</label>
+                                                                <input class="form-control"
+                                                                    type="text"
+                                                                    value="027 BC1, Diego De Almagro (El Salvador)">
+                                                                
+                                                            </div>
+
+
+                                                            <div id="empleadoRecinto" class="mb-3">
+
+                                                                <label class="form-label">Cantidad de
+                                                                    personas</label>
+                                                                <input class="form-control" type="text"
+                                                                    value="2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                                                            <div id="ResRec" class="mb-3">
+                                                                <label class="form-label">N° de resolución</label>
+                                                                <input class="form-control"
+                                                                    type="text" value="DEC.: N° 2698 del 26.07.1982">
+                                                            </div>
+                                                            <div id="estadoOperativo" class="mb-3">
+                                                                <label class="form-label">Equipamiento</label>
+                                                                <select class="form-select ">
+                                                                    <option selected="selected" value="1">Operativo
+                                                                    </option>
+                                                                </select>
+                                                            
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Estado de convenio
+                                                                    Madre</label>
+                                                                <select class="form-select">
+                                                                    <option selected="selected" value="2">Vigente
+                                                                    </option>
+                                                                </select>
+
+                                                            
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label ">Estado de
+                                                                    ampliación</label>
+                                                                <select class="form-select">
+                                                                    <option selected="selected" value="2">Vigente
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="ero" class="mb-3">
+                                                                <label class="form-label">Responsable</label>
+                                                                <select class="form-select">
+                                                                    <option selected="selected" value="531">13223096-K -
+                                                                        Carola Díaz</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="depende" class="mb-3">
+                                                                <label class="form-label">Depende</label>
+                                                                <input class="form-control"
+                                                                    type="text" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionUbicacion">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingtwo">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseUbicacion"
+                                                        aria-expanded="true" aria-controls="collapseUbicacion">
+                                                        Ubicación geográfica
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseUbicacion" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingtwo" data-bs-parent="#accordionUbicacion">
+                                                    <div class="accordion-body row">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div id="region" class="mb-3">
+                                                                    <label class="form-label">Región</label>
+                                                                    <select class="form-select">
+
+                                                                        <option value="15">Arica y Parinacota
+                                                                        </option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div id="comuna" class="mb-3">
+                                                                    <label class="form-label text-success"
+                                                                        for="dropList_dropListaComuna">Comuna</label>
+                                                                    <select class="form-select">
+                                                                        <option value="3101">Copiapó</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Casilla</label>
+                                                                    <input class="form-control" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Localidad</label>
+                                                                    <input class="form-control" type="text"
+                                                                        value="El Salvador">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Código
+                                                                        postal</label>
+                                                                    <input class="form-control" type="number"
+                                                                        value="1500000">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Tipo vía</label>
+                                                                    <select class="form-select">
+                                                                        <option selected="selected" value="2">
+                                                                            Avenida</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Nombre vía</label>
+                                                                    <input class="form-control" type="text"
+                                                                        value="Potrerillos Norte  , El Salvador">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                                <div id="contenedor-numero-via" class="mb-3">
+                                                                    <label class="form-label">Número vía</label>
+                                                                    <input class="form-control" type="text" value="710">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Longitud</label>
+                                                                    <input class="form-control" type="text"
+                                                                        value="-69.6298">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Latitud</label>
+                                                                    <input class="form-control" type="text"
+                                                                        value="-26.247445">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Población
+                                                                        comuna (CENSO 2017)</label>
+                                                                    <input class="form-control" type="text"
+                                                                        value="13.925">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Población
+                                                                        objetivo</label>
+                                                                    <input class="form-control" type="text" value="688">
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionRedes">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingTree">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseRedes"
+                                                        aria-expanded="true" aria-controls="collapseRedes">
+                                                        Redes sociales
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseRedes" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTree" data-bs-parent="#accordionRedes">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="float-end mb-2" id="panel-edit-3-campos">
+                                                                    <button type="button" class="btn btn-crear"><i
+                                                                            class="fa fa-plus"></i> Agregar nueva red
+                                                                        social</button>
+
+                                                                </div>
+
+                                                                <table
+                                                                    class="table table-striped table-hover table-bordered panel-edit-3-lista"
+                                                                    id="tabla-redesSociales">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Red Social</th>
+                                                                            <th class="w-50">Url</th>
+                                                                            <th>Accion</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="tbodyRS">
+                                                                        <tr>
+                                                                            <td>Facebook</td>
+                                                                            <td>https://www.facebook.com/Biblioteca-El-Salvador-128938510514722/
+                                                                            </td>
+                                                                            <td><a class="btn btn-panel-editar mx-1"><i
+                                                                                        class="fa fa-edit"></i></a><a
+                                                                                    class="btn btn-panel-eliminar mx-1"><i
+                                                                                        class="fa fa-trash"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Facebook</td>
+                                                                            <td>https://www.facebook.com/Biblioteca-El-Salvador-128938510514722/?__tn__=%2Cd%2CP-R&amp;eid=ARB2Sy3r4x0OrQ1j2WbVvLRRoPGxmmqyvvh4uuT7S5hqzkz9J_X25aaeMU1KglxqNmMTLbmfBNkDgEFo
+                                                                            </td>
+                                                                            <td><a class="btn btn-panel-editar mx-1"><i
+                                                                                        class="fa fa-edit"></i></a><a
+                                                                                    class="btn btn-panel-eliminar mx-1"><i
+                                                                                        class="fa fa-trash"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Web - Biblioredes</td>
+                                                                            <td>www.biblioredes.gob.cl/bibliotecas/elsalvador
+                                                                            </td>
+                                                                            <td><a class="btn btn-panel-editar mx-1"><i
+                                                                                        class="fa fa-edit"></i></a><a
+                                                                                    class="btn btn-panel-eliminar mx-1"><i
+                                                                                        class="fa fa-trash"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-footer p-1">
+                                                <div>
+                                                    Responsable Actualización: <strong>Tecnología</strong><span
+                                                        class="float-end">Última actualizacíon
+                                                        <strong>03-01-2022</strong></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionHorario">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingFour">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseHorario"
+                                                        aria-expanded="true" aria-controls="collapseHorario">
+                                                        Horario de atención
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseHorario" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingFour" data-bs-parent="#accordionHorario">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 ">
+                                                            <table
+                                                                class="table table-striped table-hover table-bordered"
+                                                                id="tabla-horarioRecinto">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Lunes</th>
+                                                                        <th>Martes</th>
+                                                                        <th>Miércoles</th>
+                                                                        <th>Jueves</th>
+                                                                        <th>Viernes</th>
+                                                                        <th>Sábado</th>
+                                                                        <th>Domingo</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="mostrarHorarioRecinto">
+                                                                    <tr>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                        <td>No definido</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionEstado">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingSix">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstado"
+                                                        aria-expanded="true" aria-controls="collapseEstado">
+                                                        Estado de recinto y servicios
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseEstado" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingSix" data-bs-parent="#accordionEstado">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-bordered"
+                                                                    id="panel-edit-4-switch">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width: 30%;">Estado Servicios
+                                                                                BiblioRedes y Aleph
+                                                                            </th>
+                                                                            <th style="width: 32%;">
+                                                                                <div class="btn btn-sm btn-block">
+                                                                                    <label>Instalado</label> <span
+                                                                                        class="badge text-bg-secondary">No</span>
+                                                                                    / <span
+                                                                                        class="badge text-bg-success">Si</span>
+                                                                                </div>
+                                                                            </th>
+                                                                            <th style="width: 40%; ">
+                                                                                <div class="btn btn-sm btn-block">
+                                                                                    <label>Estado</label>
+                                                                                    <span
+                                                                                        class="badge text-bg-secondary">Inactivo</span>
+                                                                                    / <span
+                                                                                        class="badge text-bg-success">Activo</span>
+                                                                                </div>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Sesiones Wifi
+                                                                            </td>
+                                                                            <!--Instalado Con valor-->
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <!--Estado Con valor-->
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+
+
+
+                                                                        <tr>
+                                                                            <td>
+                                                                                Contador
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Préstamos Automatizados
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Préstamos No Automatizados
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Servicio de Capacitación
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Sesiones
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <div
+                                                                                    class="form-check form-switch d-flex justify-content-center">
+                                                                                    <input class="form-check-input "
+                                                                                        type="checkbox" role="switch"
+                                                                                        id="flexSwitchCheckDefault">
+
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 ">
+                                                            <table class="table table-bordered"
+                                                                id="panel-edit-4-fechas">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="2">Estado de Recinto <br>(Servicios
+                                                                            BiblioRedes) </th>
+                                                                        <th>
+                                                                            <div class="btn btn-sm pull-right">
+                                                                                Estado <span
+                                                                                    class="badge text-bg-secondary">No
+                                                                                    Operativo</span> / <span
+                                                                                    class="badge text-bg-success">Operativo</span>
+                                                                            </div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p class="texto-error">No operativo</p>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div
+                                                                                class="form-check form-switch d-flex justify-content-center">
+                                                                                <input class="form-check-input "
+                                                                                    type="checkbox" role="switch"
+                                                                                    id="flexSwitchCheckDefault">
+
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                    <tr>
+                                                                        <td colspan="3">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">Operativo
+                                                                                    desde</label>
+                                                                                <div class="input-group">
+                                                                                    <input type="text"
+                                                                                        class="form-control no-border-derecho"
+                                                                                        id="datepicker">
+                                                                                    <span
+                                                                                        class="input-group-text bg-white border-no-redondeado no-border-izquierdo"
+                                                                                        id="basic-addon2"><i
+                                                                                            class="far fa-calendar-alt"></i></span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="row mb-3">
+                                                                                <div class="col-6">
+                                                                                    <label class="form-label">Cerrado
+                                                                                        desde</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text"
+                                                                                            class="form-control no-border-derecho"
+                                                                                            id="datepicker">
+                                                                                        <span
+                                                                                            class="input-group-text bg-white border-no-redondeado no-border-izquierdo"
+                                                                                            id="basic-addon2"><i
+                                                                                                class="far fa-calendar-alt"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6 ">
+                                                                                    <label class="form-label">Cerrado
+                                                                                        hasta</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text"
+                                                                                            class="form-control no-border-derecho"
+                                                                                            id="datepicker">
+                                                                                        <span
+                                                                                            class="input-group-text bg-white border-no-redondeado no-border-izquierdo"
+                                                                                            id="basic-addon2"><i
+                                                                                                class="far fa-calendar-alt"></i></span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="dropdownlist"
+                                                                                    class="form-label">Causa de
+                                                                                    cierre</label>
+                                                                                <select class="form-select"
+                                                                                    id="dropdownlist">
+                                                                                    <option value="">Seleccione
+                                                                                    </option>
+                                                                                    <option value="">COVID-19 Prevención
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+
+                                                            </table>
+                                                            <button type="button" class="btn btn-ver-mas  float-end "><i
+                                                                    class="fas fa-file fa-1x" aria-hidden="true"></i>
+                                                                Ver más</button>
+
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <label class="color-negro mb-3">
+                                                                    Observaciones
+                                                                </label>
+                                                                <br>
+                                                                <label class="mb-3">Ingrese una observación</label>
+
+                                                                <textarea class="form-control" cols="20" data-val="true"
+                                                                    data-val-length="No debe ser mayor a 150 carácteres."
+                                                                    data-val-length-max="150" maxlength="150"
+                                                                    name="_observaciones" rows="3"></textarea>
+
+                                                                    <label class="font-normal fs-6">NOTA: Máximo 150 caracteres</label>
+
+
+                                                                <br>
+                                                                <button type="button"
+                                                                    class="btn btn-ver-mas  float-end "><i
+                                                                        class="fas fa-file fa-1x"
+                                                                        aria-hidden="true"></i> Ver más</button>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionFuncionario">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingSeven">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseFuncionario"
+                                                        aria-expanded="true" aria-controls="collapseFuncionario">
+                                                        Funcionario
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFuncionario" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingSeven"
+                                                    data-bs-parent="#accordionFuncionario">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table
+                                                                    class="table table-striped table-hover table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Rut</th>
+                                                                            <th>Nombre y Apellido</th>
+                                                                            <th>Correo</th>
+                                                                            <th>Teléfono / Celular</th>
+                                                                            <th>Cargo</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>15820399-5</td>
+                                                                            <td>ANGELA CRISTINA ARANEDA</td>
+                                                                            <td><a href="mailto:b105bc1@abretumundo.cl" class="text-dark">b105bc1@abretumundo.cl</a>
+                                                                            </td>
+                                                                            <td>2667 0741 / 956400494 </td>
+                                                                            <td>Responsable comunal de bibliotecas
+                                                                                públicas</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>13617576-9</td>
+                                                                            <td>hortensia muñoz</td>
+                                                                            <td><a href="mailto:imunozp@codep.cl" class="text-dark">imunozp@codep.cl</a>
+                                                                            </td>
+                                                                            <td>229936206 / 977039721 </td>
+                                                                            <td>JB - Jefa Biblioteca</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>15422336-3</td>
+                                                                            <td>ROMINA ELIZABETH GAMBOA</td>
+                                                                            <td><a href="mailto:b105bc1@abretumundo.cl" class="text-dark">b105bc1@abretumundo.cl</a></td>
+
+                                                                            <td>227478834 / </td>
+                                                                            <td>EPB - Encargada Programa BiblioRedes
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionCodigos">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingEight">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseCodigos"
+                                                        aria-expanded="true" aria-controls="collapseCodigos">
+                                                        Códigos alternativos
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseCodigos" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingEight" data-bs-parent="#accordionCodigos">
+                                                    <div class="accordion-body row">
+                                                        <div class="float-end mb-3">
+                                                            <button type="button" class="btn btn-crear float-end">
+                                                                <i class="fa fa-plus me-2"></i>Agregar nuevo código
+                                                            </button>
+                                                        </div>
+                                                        <div class="table-responsive">
+
+                                                            <table
+                                                                class="table table-striped table-hover table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Código Alternativo</th>
+                                                                        <th>Nombre Alternativo</th>
+                                                                        <th>Nombre Origen</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody class="tbody">
+                                                                    <tr>
+                                                                        <td>BTREN</td>
+                                                                        <td>Bibliotren de Pudahuel</td>
+                                                                        <td>ALEPH</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>94</td>
+                                                                        <td></td>
+                                                                        <td>RU</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>0</td>
+                                                                        <td>BIBLIOTREN</td>
+                                                                        <td>SNBP</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionSostenedora">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingNine">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseSostenedora"
+                                                        aria-expanded="true" aria-controls="collapseSostenedora">
+                                                        Institución sostenedora
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSostenedora" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingNine"
+                                                    data-bs-parent="#accordionSostenedora">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="mb-3">
+                                                                    <label class="control-label">Tipo institución
+                                                                        sostenedora disponible</label>
+                                                                    <select class="form-select"
+                                                                        id="recintoTipoSostenedor"
+                                                                        name="CodigoTipoSostenedor">
+                                                                        <option value="1">Ninguno</option>
+                                                                        <option value="7">Otro</option>
+                                                                        <option value="3">Corporación</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div id="cont_tsostenedor_seleccionado">
+                                                                    <table
+                                                                        class="table table-striped table-hover table-bordered">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Tipo sostenedor propuesto</th>
+                                                                                <th>Rut institución</th>
+                                                                                <th>Nombre institución</th>
+                                                                                <th>Representante Legal</th>
+                                                                                <th>Correo</th>
+                                                                                <th>Teléfono</th>
+                                                                                <th>Acción</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Corporación</td>
+                                                                                <td>7083520-0</td>
+                                                                                <td>Corporación Municipal de Desarrollo
+                                                                                    Social de Pudahuel</td>
+                                                                                <td>MIGUEL ANGEL PAVEZ TORO</td>
+                                                                                <td>mmora@codep.cl</td>
+                                                                                <td>226402500</td>
+                                                                                <td><a class="btn btn-panel-editar">
+                                                                                        <i class="fa fa-edit"></i></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionDocumentos">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingTen">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseDocumentos"
+                                                        aria-expanded="true" aria-controls="collapseDocumentos">
+                                                        Documentos adjuntos
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseDocumentos" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTen" data-bs-parent="#accordionDocumentos">
+                                                    <div class="accordion-body row">
+                                                        <div class=" float-end">
+                                                            <button
+                                                                class=" float-end btn btn-agregar agregar_archivo_boton"
+                                                                id="btn_add_file_extra"><i
+                                                                    class="fas fa-plus-circle"></i> Agregar otro
+                                                                documento</button>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="input_archivos_wrap">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                                                        <label class="form-label">Tipo
+                                                                            documento</label>
+                                                                        <select class="form-select"
+                                                                            id="tipoDocdropdownlist" name="TipoArchivo"
+                                                                            required="required">
+                                                                            <option value="">Seleccione</option>
+                                                                            <option value="1">Resolución</option>
+                                                                            <option value="2">Convenio madre</option>
+                                                                            <option value="7">Otros</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                                                        <label class="form-label">Adjuntar
+                                                                            archivo</label>
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="file" class="form-control"
+                                                                                id="inputGroupFile02">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                                                        <div class="form-group">
+                                                                            <label
+                                                                                class="form-label">Cancelar</label><br>
+                                                                            <button class="btn btn-danger clear_field"
+                                                                                type="button"><i
+                                                                                    class="fa fa-minus-circle"></i></button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionEquipamiento">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingEleven">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEquipamiento"
+                                                        aria-expanded="true" aria-controls="collapseEquipamiento">
+                                                        Equipamiento
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseEquipamiento" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingEleven"
+                                                    data-bs-parent="#accordionEquipamiento">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table
+                                                                    class="table table-striped table-hover table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Equipo</th>
+                                                                            <th>Cantidad</th>
+                                                                            <th>Detalle</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Contador</td>
+                                                                            <td>1</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Impresora</td>
+                                                                            <td>1</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>PC</td>
+                                                                            <td>7</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>PC_Pot.</td>
+                                                                            <td>1</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>PCa</td>
+                                                                            <td>2</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Scanner</td>
+                                                                            <td>1</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>WiFi</td>
+                                                                            <td>1</td>
+                                                                            <td style="width:150px;">
+                                                                                <div class="btn-group">
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-detalle mx-1"><i
+                                                                                            class="fas fa-eye"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-verde mx-1"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="#"
+                                                                                        class="btn btn-panel-turquesa mx-1"><i
+                                                                                            class="fas fa-clipboard"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionEnlaces">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingTwelve">
+                                                    <button class="accordion-button text-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEnlaces"
+                                                        aria-expanded="true" aria-controls="collapseEnlaces">
+                                                        Enlaces
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseEnlaces" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingtwelve" data-bs-parent="#accordionEnlaces">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 ">
+                                                            <div class="table-responsive">
+                                                                <table
+                                                                    class="table table-striped table-hover table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Tipo enlace</th>
+                                                                            <th>Tecnología</th>
+                                                                            <th>Velocidad acceso</th>
+                                                                            <th>Velocidad proyectada</th>
+                                                                            <th>Estado enlace</th>
+                                                                            <th>Proveedor enlace</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>BR</td>
+                                                                            <td>FO</td>
+                                                                            <td>7 M</td>
+                                                                            <td>6 M</td>
+                                                                            <td>Activo</td>
+                                                                            <td>Entel</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="accordion-footer p-1">
+                                                    <div>
+                                                        Responsable Actualización: <strong>Tecnología</strong><span
+                                                            class="float-end">Última actualizacíon
+                                                            <strong>03-01-2022</strong></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mx-4 px-1 mb-4">
+                                    <a class="btn boton-outline-primary float-end border-no-redondeado mx-1"
+                                        href="javascript:void(0);"><i class="fas fa-arrow-left"></i> Volver</a>
+                                    <button id="validacion"
+                                        class=" btn btn-actualizar float-end border-no-redondeado mx-1" type="submit"><i
+                                            class="fas fa-floppy-disk fa-1x" aria-hidden="true"></i> Actualizar</button>
+
+
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div id="ir-arriba">
+                    <div class="container">
+                        <a>
+                            <i class="btn btn-primario fas fa-chevron-up ir-arriba" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+
+    <script src="../js/vendor/simple_datatable/simple-datatables.min.js"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+
+    <script src="../js/vendor/Datepicker/bootstrap-datepicker.js"></script>
+    <script src="../js/vendor/Datepicker/bootstrap-datepicker.es.min.js"></script>
+
+    <script type="text/javascript" src="../js/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    
+    <script src="../js/subir.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                dateFormat: "dd-mm-yy", // Formato de fecha dd-mm-yy
+                language: "es",
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.selectpicker').selectpicker({
+                multiple: true, // Habilitar múltiple selección
+                liveSearch: true, // Habilitar búsqueda en vivo
+                liveSearchPlaceholder: 'Buscar', // Texto de marcador de posición para el campo de búsqueda
+                noneSelectedText: 'Nada seleccionado', // Texto a mostrar cuando no se ha seleccionado nada
+            });
+        });
+    </script>
+</body>
+
+
+</html>

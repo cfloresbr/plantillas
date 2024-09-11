@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!--<link href="../css/styles1.css" rel="stylesheet" />-->
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="examples/index.html">
+            <img class="logobase" src="../img/logo-serviceit.png">
+            <img class="logosimple" src="../img/logo-serviceit.png">
+        </a>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <div>
+                <h6 class="m-0 fst-italic d-none d-lg-inline azul"><img class="mb-1 me-2" src="../img/sga-logo.svg">Nombre aplicación</h6>
+            </div>
+
+            
+        <div class="ms-auto me-0 my-md-0 pr-3 btn">
+            <!--<div class="float-start me-1">
+                <span class="" style="color:#5e78b2!important">Cliente seleccionado:</span>
+                <select class="select-header">
+                    <option>Nombre cliente A</option>
+                    <option>Nombre cliente A</option>
+                </select>
+            </div>-->
+            <div class="float-start p-0">
+                <!--<button class="btn btn-usuario color-icon">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="" style="color:#5e78b2!important">Cliente seleccionado: </span>
+                            <span class="d-none d-md-inline fw-bold">Nombre cliente A</span>
+    
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>-->
+                <span class="d-none d-xl-inline azul">Cliente seleccionado: </span>
+                <button class="btn color-icon px-0">
+                    <li class="nav-item dropdown " style="list-style: none;">
+                        <a class="link-header dropdown-toggle me-1 nav-user px-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="azul fw-bold">Nombre cliente A</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>
+            </div>
+            
+            <button class="float-start btn-ayuda me-0 px-0">
+                <a class="btn" href="ayuda.html">
+                <i class="fas fa-circle-question fa-fw me-1 m-0 color-icon"></i><span class="d-none d-md-inline">Ayuda</span> 
+                </a>
+            </button>
+
+            <button class="btn btn-usuario color-icon px-0">
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a class="link-header dropdown-toggle me-1 nav-user " id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <circle><i class="fas fa-user fa-fw me-1 color-icon"></i></circle><span class="d-none d-md-inline">Nombre Apellido</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item pe-2" href="cambiar-contrasena.html"><i class="fas fa-key color-icon2"></i> Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item pe-2" href="preguntas.html"><i class="fas fa-user-lock color-icon2"></i> Preguntas de seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open color-icon2"></i> Salir</a></li>
+                    </ul>
+                </li>
+            </button>
+        </div>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="form1.html"><i class="fas fa-circle me-2 fz-8"></i>Inputs</a>
+                                <a class="nav-link submenu-opcion" href="buscador.html"><i class="fas fa-circle me-2 fz-8"></i>Buscador</a>
+                                <a class="nav-link submenu-opcion" href="form2.html"><i class="fas fa-circle me-2 fz-8"></i>Detalle</a>
+                            </nav>
+                        </div>
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="tabla-mantenedor.html"><i class="fas fa-circle me-2 fz-8"></i>Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="tables.html"><i class="fas fa-circle me-2 fz-8"></i>Tablas</a>
+                                
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="listadoRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Ejemplo registros</a>
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    <i class="fas fa-circle me-2 fz-8"></i>Operaciones
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav ms-2">
+                                        <a class="nav-link submenu-opcion" href="crearRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Crear</a>
+                                        <a class="nav-link submenu-opcion" href="editarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Editar</a>
+                                        <a class="nav-link submenu-opcion" href="eliminarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="desactivarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="modales.html"><i class="fas fa-circle me-2 fz-8"></i>Modales</a>
+                                <a class="nav-link submenu-opcion" href="modales-operaciones.html"><i class="fas fa-circle me-2 fz-8"></i>Alertas</a>
+                                <a class="nav-link submenu-opcion" href="autoAyuda.html"><i class="fas fa-circle me-2 fz-8"></i>Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="acordeon.html"><i class="fas fa-circle me-2 fz-8"></i>Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="pestanas.html"><i class="fas fa-circle me-2 fz-8"></i>Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="login.html"><i class="fas fa-circle me-2 fz-8"></i>Login</a>
+                                        <a class="nav-link submenu-opcion" href="login_fail.html"><i class="fas fa-circle me-2 fz-8"></i>Login error</a>
+                                        <a class="nav-link submenu-opcion" href="recuperar-clave.html"><i class="fas fa-circle me-2 fz-8"></i>Recuperar Clave</a>
+                                        <a class="nav-link submenu-opcion" href="login_secreta.html"><i class="fas fa-circle me-2 fz-8"></i>Pregunta secreta</a>
+                                        <a class="nav-link submenu-opcion" href="login_contrasena.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio password</a>
+                                        <a class="nav-link submenu-opcion" href="login_cambio_ok.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="sesion-caducada.html"><i class="fas fa-circle me-2 fz-8"></i>Sesión caducada</a>
+                                        <a class="nav-link submenu-opcion" href="404.html"><i class="fas fa-circle me-2 fz-8"></i>Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="mantenimiento.html"><i class="fas fa-circle me-2 fz-8"></i>Mantenimiento</a>
+                                                                                        
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Distribuido por:</span>
+                    <img class="text-sidebar-footer" style="width: 120px;" src="../img/logo-serviceit.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title d-flex">
+                            <h1 class="h1-aplicaciones-br">Crear ipsum</h1>
+
+                        </div>
+
+                        
+                            <form action="/Recintos/Create" class="needs-validation was-validated"
+                                enctype="multipart/form-data" id="formRecinto" method="post" novalidate="novalidate">
+
+
+                                <div class="row no-gutters align-items-center mt-2">
+                                    <div id="panel-edit-8" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionUbicacion">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button " type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseLorem"
+                                                        aria-expanded="true" aria-controls="collapseLorem">
+                                                        Lorem ipsum
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseLorem" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionUbicacion">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="region" class="mb-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label" for="">Localidad</label>
+                                                                    <select class="form-select" id="formTipoVia" disabled>
+                                                                        <option selected>Seleccione</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="region" class="mb-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label" for="">Localidad</label>
+                                                                    <input type="text" class="form-control" placeholder="Ingrese lorem ipsum">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row no-gutters align-items-center mt-2">
+                                    <div id="panel-edit-8" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="codigo"><span>
+                                            &lt;div class=&quot;row no-gutters align-items-center m-4&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&lt;div id=&quot;panel-edit-8&quot; class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;accordion&quot; id=&quot;accordionUbicacion&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;accordion-item border-no-redondeado&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class=&quot;accordion-header&quot; id=&quot;headingOne&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;accordion-button text-white&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseLorem&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseLorem&quot;&gt; Lorem ipsum &lt;/button&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;collapseLorem&quot; class=&quot;accordion-collapse collapse show&quot; aria-labelledby=&quot;headingOne&quot; data-bs-parent=&quot;#accordionUbicacion&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;accordion-body row&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;col-12 col-md-6 col-lg-6&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;region&quot; class=&quot;mb-3&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;mb-3&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-label&quot; for=&quot;&quot;&gt;Localidad&lt;/label&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select class=&quot;form-select&quot; id=&quot;formTipoVia&quot; disabled&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option selected&gt;Seleccione&lt;/option&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;col-12 col-md-6 col-lg-6&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;region&quot; class=&quot;mb-3&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;mb-3&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-label&quot; for=&quot;&quot;&gt;Localidad&lt;/label&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Ingrese lorem ipsum&quot;&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;mb-3&quot;&gt;
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&nbsp;&nbsp;&nbsp;&lt;/div&gt; 
+                                            <br>&lt;/div&gt;
+                                        </span></div>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row no-gutters align-items-center  mt-2">
+                                    <div id="panel-edit-8" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionUbicacion">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseUbicacion"
+                                                        aria-expanded="true" aria-controls="collapseUbicacion">
+                                                        Ubicacion
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseUbicacion" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionUbicacion">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="region" class="mb-3">
+                                                                <label for="regiondropdownlist"
+                                                                    class="form-label">Región</label>
+                                                                <select class="form-select  is-invalid"
+                                                                    id="regiondropdownlist" name="CodigoRegion"
+                                                                    required="required">
+                                                                    <option value="">Seleccione</option>
+                                                                    <option value="0">S/I</option>
+                                                                    <option value="15">Arica y Parinacota</option>
+                                                                    <option value="1">Tarapacá</option>
+                                                                    <option value="2">Antofagasta</option>
+                                                                    <option value="3">Atacama</option>
+                                                                    <option value="4">Coquimbo</option>
+                                                                    <option value="5">Valparaíso</option>
+                                                                    <option value="13">Metropolitana de Santiago
+                                                                    </option>
+                                                                    <option value="6">Libertador Gral. Bernardo
+                                                                        O’Higgins</option>
+                                                                    <option value="7">Maule</option>
+                                                                    <option value="16">Ñuble</option>
+                                                                    <option value="8">Biobío</option>
+                                                                    <option value="9">La Araucanía</option>
+                                                                    <option value="14">Los Ríos</option>
+                                                                    <option value="10">Los Lagos</option>
+                                                                    <option value="11">Aisén del Gral. Carlos Ibáñez del
+                                                                        Campo</option>
+                                                                    <option value="12">Magallanes y de la Antártica
+                                                                        Chilena</option>
+                                                                    <option value="22">testing</option>
+                                                                    <option value="26">testingfds</option>
+                                                                </select>
+                                                                <span class="form-text"></span>
+                                                            </div>
+                                                            <div id="comuna" class="mb-3">
+                                                                <label for="CodigoComuna"
+                                                                    class="form-label">Comuna</label>
+                                                                <select class="form-select " data-val="true"
+                                                                    data-val-required="The CodigoComuna field is required."
+                                                                    id="comunadropdownlist"
+                                                                    name="recintos1.CodigoComuna" required="required">
+                                                                    <option value="">Seleccione</option>
+                                                                    <option selected="selected" value="0">S/I</option>
+                                                                    <option value="10101">Puerto Montt</option>
+                                                                    <option value="10102">Calbuco</option>
+                                                                    <option value="10103">Cochamó</option>
+                                                                    <option value="10104">Fresia</option>
+                                                                    <option value="10105">Frutillar</option>
+                                                                    <option value="10106">Los Muermos</option>
+                                                                    <option value="10107">Llanquihue</option>
+                                                                    <option value="10108">Maullín</option>
+                                                                    <option value="10109">Puerto Varas</option>
+                                                                    <option value="10201">Castro</option>
+                                                                    <option value="10202">Ancud</option>
+                                                                    <option value="10203">Chonchi</option>
+                                                                    <option value="10204">Curaco de Vélez</option>
+                                                                    <option value="10205">Dalcahue</option>
+                                                                    <option value="10206">Puqueldón</option>
+                                                                    <option value="10207">Queilén</option>
+                                                                    <option value="10208">Quellón</option>
+                                                                    <option value="10209">Quemchi</option>
+                                                                    <option value="10210">Quinchao</option>
+                                                                    <option value="10301">Osorno</option>
+                                                                    <option value="10302">Puerto Octay</option>
+                                                                    <option value="10303">Purranque</option>
+                                                                    <option value="10304">Puyehue</option>
+                                                                    <option value="10305">Río Negro</option>
+                                                                    <option value="10306">San Juan de la Costa</option>
+                                                                    <option value="10307">San Pablo</option>
+                                                                    <option value="10401">Chaitén</option>
+                                                                    <option value="10402">Futaleufú</option>
+                                                                    <option value="10403">Hualaihué</option>
+                                                                    <option value="10404">Palena</option>
+                                                                    <option value="1101">Iquique</option>
+                                                                    <option value="1107">Alto Hospicio</option>
+                                                                    <option value="11101">Coihaique</option>
+                                                                    <option value="11102">Lago Verde</option>
+                                                                    <option value="11201">Aisén</option>
+                                                                    <option value="11202">Cisnes</option>
+                                                                    <option value="11203">Guaitecas</option>
+                                                                    <option value="11301">Cochrane</option>
+                                                                    <option value="11302">O’Higgins</option>
+                                                                    <option value="11303">Tortel</option>
+                                                                    <option value="11401">Chile Chico</option>
+                                                                    <option value="11402">Río Ibáñez</option>
+                                                                    <option value="12101">Punta Arenas</option>
+                                                                    <option value="12102">Laguna Blanca</option>
+                                                                    <option value="12103">Río Verde</option>
+                                                                    <option value="12104">San Gregorio</option>
+                                                                    <option value="12201">Cabo de Hornos</option>
+                                                                    <option value="12202">Antártica</option>
+                                                                    <option value="12301">Porvenir</option>
+                                                                    <option value="12302">Primavera</option>
+                                                                    <option value="12303">Timaukel</option>
+                                                                    <option value="12401">Natales</option>
+                                                                    <option value="12402">Torres del Paine</option>
+                                                                    <option value="13101">Santiago</option>
+                                                                    <option value="13102">Cerrillos</option>
+                                                                    <option value="13103">Cerro Navia</option>
+                                                                    <option value="13104">Conchalí</option>
+                                                                    <option value="13105">El Bosque</option>
+                                                                    <option value="13106">Estación Central</option>
+                                                                    <option value="13107">Huechuraba</option>
+                                                                    <option value="13108">Independencia</option>
+                                                                    <option value="13109">La Cisterna</option>
+                                                                    <option value="13110">La Florida</option>
+                                                                    <option value="13111">La Granja</option>
+                                                                    <option value="13112">La Pintana</option>
+                                                                    <option value="13113">La Reina</option>
+                                                                    <option value="13114">Las Condes</option>
+                                                                    <option value="13115">Lo Barnechea</option>
+                                                                    <option value="13116">Lo Espejo</option>
+                                                                    <option value="13117">Lo Prado</option>
+                                                                    <option value="13118">Macul</option>
+                                                                    <option value="13119">Maipú</option>
+                                                                    <option value="13120">Ñuñoa</option>
+                                                                    <option value="13121">Pedro Aguirre Cerda</option>
+                                                                    <option value="13122">Peñalolén</option>
+                                                                    <option value="13123">Providencia</option>
+                                                                    <option value="13124">Pudahuel</option>
+                                                                    <option value="13125">Quilicura</option>
+                                                                    <option value="13126">Quinta Normal</option>
+                                                                    <option value="13127">Recoleta</option>
+                                                                    <option value="13128">Renca</option>
+                                                                    <option value="13129">San Joaquín</option>
+                                                                    <option value="13130">San Miguel</option>
+                                                                    <option value="13131">San Ramón</option>
+                                                                    <option value="13132">Vitacura</option>
+                                                                    <option value="13201">Puente Alto</option>
+                                                                    <option value="13202">Pirque</option>
+                                                                    <option value="13203">San José de Maipo</option>
+                                                                    <option value="13301">Colina</option>
+                                                                    <option value="13302">Lampa</option>
+                                                                    <option value="13303">Tiltil</option>
+                                                                    <option value="13401">San Bernardo</option>
+                                                                    <option value="13402">Buin</option>
+                                                                    <option value="13403">Calera de Tango</option>
+                                                                    <option value="13404">Paine</option>
+                                                                    <option value="13501">Melipilla</option>
+                                                                    <option value="13502">Alhué</option>
+                                                                    <option value="13503">Curacaví</option>
+                                                                    <option value="13504">María Pinto</option>
+                                                                    <option value="13505">San Pedro</option>
+                                                                    <option value="13601">Talagante</option>
+                                                                    <option value="13602">El Monte</option>
+                                                                    <option value="13603">Isla de Maipo</option>
+                                                                    <option value="13604">Padre Hurtado</option>
+                                                                    <option value="13605">Peñaflor</option>
+                                                                    <option value="1401">Pozo Almonte</option>
+                                                                    <option value="1402">Camiña</option>
+                                                                    <option value="1403">Colchane</option>
+                                                                    <option value="1404">Huara</option>
+                                                                    <option value="1405">Pica</option>
+                                                                    <option value="14101">Valdivia</option>
+                                                                    <option value="14102">Corral</option>
+                                                                    <option value="14103">Lanco</option>
+                                                                    <option value="14104">Los Lagos</option>
+                                                                    <option value="14105">Máfil</option>
+                                                                    <option value="14106">Mariquina</option>
+                                                                    <option value="14107">Paillaco</option>
+                                                                    <option value="14108">Panguipulli</option>
+                                                                    <option value="14201">La Unión</option>
+                                                                    <option value="14202">Futrono</option>
+                                                                    <option value="14203">Lago Ranco</option>
+                                                                    <option value="14204">Río Bueno</option>
+                                                                    <option value="15101">Arica</option>
+                                                                    <option value="15102">Camarones</option>
+                                                                    <option value="15201">Putre</option>
+                                                                    <option value="15202">General Lagos</option>
+                                                                    <option value="16101">Chillán</option>
+                                                                    <option value="16102">Bulnes</option>
+                                                                    <option value="16103">Chillán Viejo</option>
+                                                                    <option value="16104">El Carmen</option>
+                                                                    <option value="16105">Pemuco</option>
+                                                                    <option value="16106">Pinto</option>
+                                                                    <option value="16107">Quillón</option>
+                                                                    <option value="16108">San Ignacio</option>
+                                                                    <option value="16109">Yungay</option>
+                                                                    <option value="16201">Quirihue</option>
+                                                                    <option value="16202">Cobquecura</option>
+                                                                    <option value="16203">Coelemu</option>
+                                                                    <option value="16204">Ninhue</option>
+                                                                    <option value="16205">Portezuelo</option>
+                                                                    <option value="16206">Ránquil</option>
+                                                                    <option value="16207">Treguaco</option>
+                                                                    <option value="16301">San Carlos</option>
+                                                                    <option value="16302">Coihueco</option>
+                                                                    <option value="16303">Ñiquén</option>
+                                                                    <option value="16304">San Fabián</option>
+                                                                    <option value="16305">San Nicolás</option>
+                                                                    <option value="2101">Antofagasta</option>
+                                                                    <option value="2102">Mejillones</option>
+                                                                    <option value="2103">Sierra Gorda</option>
+                                                                    <option value="2104">Taltal</option>
+                                                                    <option value="2201">Calama</option>
+                                                                    <option value="2202">Ollagüe</option>
+                                                                    <option value="2203">San Pedro de Atacama</option>
+                                                                    <option value="2301">Tocopilla</option>
+                                                                    <option value="2302">María Elena</option>
+                                                                    <option value="26305">prueba</option>
+                                                                    <option value="26306">prueba2</option>
+                                                                    <option value="3101">Copiapó</option>
+                                                                    <option value="3102">Caldera</option>
+                                                                    <option value="3103">Tierra Amarilla</option>
+                                                                    <option value="3201">Chañaral</option>
+                                                                    <option value="3202">Diego de Almagro</option>
+                                                                    <option value="3301">Vallenar</option>
+                                                                    <option value="3302">Alto del Carmen</option>
+                                                                    <option value="3303">Freirina</option>
+                                                                    <option value="3304">Huasco</option>
+                                                                    <option value="4101">La Serena</option>
+                                                                    <option value="4102">Coquimbo</option>
+                                                                    <option value="4103">Andacollo</option>
+                                                                    <option value="4104">La Higuera</option>
+                                                                    <option value="4105">Paihuano</option>
+                                                                    <option value="4106">Vicuña</option>
+                                                                    <option value="4201">Illapel</option>
+                                                                    <option value="4202">Canela</option>
+                                                                    <option value="4203">Los Vilos</option>
+                                                                    <option value="4204">Salamanca</option>
+                                                                    <option value="4301">Ovalle</option>
+                                                                    <option value="4302">Combarbalá</option>
+                                                                    <option value="4303">Monte Patria</option>
+                                                                    <option value="4304">Punitaqui</option>
+                                                                    <option value="4305">Río Hurtado</option>
+                                                                    <option value="5101">Valparaíso</option>
+                                                                    <option value="5102">Casablanca</option>
+                                                                    <option value="5103">Concón</option>
+                                                                    <option value="5104">Juan Fernández</option>
+                                                                    <option value="5105">Puchuncaví</option>
+                                                                    <option value="5107">Quintero</option>
+                                                                    <option value="5109">Viña del Mar</option>
+                                                                    <option value="5201">Isla de Pascua</option>
+                                                                    <option value="5301">Los Andes</option>
+                                                                    <option value="5302">Calle Larga</option>
+                                                                    <option value="5303">Rinconada</option>
+                                                                    <option value="5304">San Esteban</option>
+                                                                    <option value="5401">La Ligua</option>
+                                                                    <option value="5402">Cabildo</option>
+                                                                    <option value="5403">Papudo</option>
+                                                                    <option value="5404">Petorca</option>
+                                                                    <option value="5405">Zapallar</option>
+                                                                    <option value="5501">Quillota</option>
+                                                                    <option value="5502">La Calera</option>
+                                                                    <option value="5503">Hijuelas</option>
+                                                                    <option value="5504">La Cruz</option>
+                                                                    <option value="5506">Nogales</option>
+                                                                    <option value="5601">San Antonio</option>
+                                                                    <option value="5602">Algarrobo</option>
+                                                                    <option value="5603">Cartagena</option>
+                                                                    <option value="5604">El Quisco</option>
+                                                                    <option value="5605">El Tabo</option>
+                                                                    <option value="5606">Santo Domingo</option>
+                                                                    <option value="5701">San Felipe</option>
+                                                                    <option value="5702">Catemu</option>
+                                                                    <option value="5703">Llaillay</option>
+                                                                    <option value="5704">Panquehue</option>
+                                                                    <option value="5705">Putaendo</option>
+                                                                    <option value="5706">Santa María</option>
+                                                                    <option value="5801">Quilpué</option>
+                                                                    <option value="5802">Limache</option>
+                                                                    <option value="5803">Olmué</option>
+                                                                    <option value="5804">Villa Alemana</option>
+                                                                    <option value="6101">Rancagua</option>
+                                                                    <option value="6102">Codegua</option>
+                                                                    <option value="6103">Coinco</option>
+                                                                    <option value="6104">Coltauco</option>
+                                                                    <option value="6105">Doñihue</option>
+                                                                    <option value="6106">Graneros</option>
+                                                                    <option value="6107">Las Cabras</option>
+                                                                    <option value="6108">Machalí</option>
+                                                                    <option value="6109">Malloa</option>
+                                                                    <option value="6110">Mostazal</option>
+                                                                    <option value="6111">Olivar</option>
+                                                                    <option value="6112">Peumo</option>
+                                                                    <option value="6113">Pichidegua</option>
+                                                                    <option value="6114">Quinta de Tilcoco</option>
+                                                                    <option value="6115">Rengo</option>
+                                                                    <option value="6116">Requínoa</option>
+                                                                    <option value="6117">San Vicente</option>
+                                                                    <option value="6201">Pichilemu</option>
+                                                                    <option value="6202">La Estrella</option>
+                                                                    <option value="6203">Litueche</option>
+                                                                    <option value="6204">Marchihue</option>
+                                                                    <option value="6205">Navidad</option>
+                                                                    <option value="6206">Paredones</option>
+                                                                    <option value="6301">San Fernando</option>
+                                                                    <option value="6302">Chépica</option>
+                                                                    <option value="6303">Chimbarongo</option>
+                                                                    <option value="6304">Lolol</option>
+                                                                    <option value="6305">Nancagua</option>
+                                                                    <option value="6306">Palmilla</option>
+                                                                    <option value="6307">Peralillo</option>
+                                                                    <option value="6308">Placilla</option>
+                                                                    <option value="6309">Pumanque</option>
+                                                                    <option value="6310">Santa Cruz</option>
+                                                                    <option value="7101">Talca</option>
+                                                                    <option value="7102">Constitución</option>
+                                                                    <option value="7103">Curepto</option>
+                                                                    <option value="7104">Empedrado</option>
+                                                                    <option value="7105">Maule</option>
+                                                                    <option value="7106">Pelarco</option>
+                                                                    <option value="7107">Pencahue</option>
+                                                                    <option value="7108">Río Claro</option>
+                                                                    <option value="7109">San Clemente</option>
+                                                                    <option value="7110">San Rafael</option>
+                                                                    <option value="7201">Cauquenes</option>
+                                                                    <option value="7202">Chanco</option>
+                                                                    <option value="7203">Pelluhue</option>
+                                                                    <option value="7301">Curicó</option>
+                                                                    <option value="7302">Hualañé</option>
+                                                                    <option value="7303">Licantén</option>
+                                                                    <option value="7304">Molina</option>
+                                                                    <option value="7305">Rauco</option>
+                                                                    <option value="7306">Romeral</option>
+                                                                    <option value="7307">Sagrada Familia</option>
+                                                                    <option value="7308">Teno</option>
+                                                                    <option value="7309">Vichuquén</option>
+                                                                    <option value="7401">Linares</option>
+                                                                    <option value="7402">Colbún</option>
+                                                                    <option value="7403">Longaví</option>
+                                                                    <option value="7404">Parral</option>
+                                                                    <option value="7405">Retiro</option>
+                                                                    <option value="7406">San Javier</option>
+                                                                    <option value="7407">Villa Alegre</option>
+                                                                    <option value="7408">Yerbas Buenas</option>
+                                                                    <option value="8101">Concepción</option>
+                                                                    <option value="8102">Coronel</option>
+                                                                    <option value="8103">Chiguayante</option>
+                                                                    <option value="8104">Florida</option>
+                                                                    <option value="8105">Hualqui</option>
+                                                                    <option value="8106">Lota</option>
+                                                                    <option value="8107">Penco</option>
+                                                                    <option value="8108">San Pedro de la Paz</option>
+                                                                    <option value="8109">Santa Juana</option>
+                                                                    <option value="8110">Talcahuano</option>
+                                                                    <option value="8111">Tomé</option>
+                                                                    <option value="8112">Hualpén</option>
+                                                                    <option value="8201">Lebu</option>
+                                                                    <option value="8202">Arauco</option>
+                                                                    <option value="8203">Cañete</option>
+                                                                    <option value="8204">Contulmo</option>
+                                                                    <option value="8205">Curanilahue</option>
+                                                                    <option value="8206">Los Álamos</option>
+                                                                    <option value="8207">Tirúa</option>
+                                                                    <option value="8301">Los Ángeles</option>
+                                                                    <option value="8302">Antuco</option>
+                                                                    <option value="8303">Cabrero</option>
+                                                                    <option value="8304">Laja</option>
+                                                                    <option value="8305">Mulchén</option>
+                                                                    <option value="8306">Nacimiento</option>
+                                                                    <option value="8307">Negrete</option>
+                                                                    <option value="8308">Quilaco</option>
+                                                                    <option value="8309">Quilleco</option>
+                                                                    <option value="8310">San Rosendo</option>
+                                                                    <option value="8311">Santa Bárbara</option>
+                                                                    <option value="8312">Tucapel</option>
+                                                                    <option value="8313">Yumbel</option>
+                                                                    <option value="8314">Alto BioBío</option>
+                                                                    <option value="8401">Chillán</option>
+                                                                    <option value="8402">Bulnes</option>
+                                                                    <option value="8403">Cobquecura</option>
+                                                                    <option value="8404">Coelemu</option>
+                                                                    <option value="8405">Coihueco</option>
+                                                                    <option value="8406">Chillán Viejo</option>
+                                                                    <option value="8407">El Carmen</option>
+                                                                    <option value="8408">Ninhue</option>
+                                                                    <option value="8409">Ñiquén</option>
+                                                                    <option value="8410">Pemuco</option>
+                                                                    <option value="8411">Pinto</option>
+                                                                    <option value="8412">Portezuelo</option>
+                                                                    <option value="8413">Quillón</option>
+                                                                    <option value="8414">Quirihue</option>
+                                                                    <option value="8415">Ránquil</option>
+                                                                    <option value="8416">San Carlos</option>
+                                                                    <option value="8417">San Fabián</option>
+                                                                    <option value="8418">San Ignacio</option>
+                                                                    <option value="8419">San Nicolás</option>
+                                                                    <option value="8420">Treguaco</option>
+                                                                    <option value="8421">Yungay</option>
+                                                                    <option value="9101">Temuco</option>
+                                                                    <option value="9102">Carahue</option>
+                                                                    <option value="9103">Cunco</option>
+                                                                    <option value="9104">Curarrehue</option>
+                                                                    <option value="9105">Freire</option>
+                                                                    <option value="9106">Galvarino</option>
+                                                                    <option value="9107">Gorbea</option>
+                                                                    <option value="9108">Lautaro</option>
+                                                                    <option value="9109">Loncoche</option>
+                                                                    <option value="9110">Melipeuco</option>
+                                                                    <option value="9111">Nueva Imperial</option>
+                                                                    <option value="9112">Padre las Casas</option>
+                                                                    <option value="9113">Perquenco</option>
+                                                                    <option value="9114">Pitrufquén</option>
+                                                                    <option value="9115">Pucón</option>
+                                                                    <option value="9116">Saavedra</option>
+                                                                    <option value="9117">Teodoro Schmidt</option>
+                                                                    <option value="9118">Toltén</option>
+                                                                    <option value="9119">Vilcún</option>
+                                                                    <option value="9120">Villarrica</option>
+                                                                    <option value="9121">Cholchol</option>
+                                                                    <option value="9201">Angol</option>
+                                                                    <option value="9202">Collipulli</option>
+                                                                    <option value="9203">Curacautín</option>
+                                                                    <option value="9204">Ercilla</option>
+                                                                    <option value="9205">Lonquimay</option>
+                                                                    <option value="9206">Los Sauces</option>
+                                                                    <option value="9207">Lumaco</option>
+                                                                    <option value="9208">Purén</option>
+                                                                    <option value="9209">Renaico</option>
+                                                                    <option value="9210">Traiguén</option>
+                                                                    <option value="9211">Victoria</option>
+                                                                </select>
+
+                                                                <span class="form-text"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                    for="recintos1_LocalidadRecinto">Localidad</label>
+                                                                <input class="form-control  is-valid"
+                                                                    id="recintos1_LocalidadRecinto"
+                                                                    name="recintos1.LocalidadRecinto"
+                                                                    onkeypress="return soloLetras(event)"
+                                                                    placeholder="Ingrese Localidad" type="text"
+                                                                    value="">
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.LocalidadRecinto"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                    for="recintos1_CodigoPostal">Codigo Postal</label>
+                                                                <input class="form-control  is-valid"
+                                                                    id="recintos1_CodigoPostal"
+                                                                    name="recintos1.CodigoPostal"
+                                                                    placeholder="Ingrese Código Postal" type="text"
+                                                                    value="">
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.CodigoPostal"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Casilla" class="form-label">Casilla</label>
+                                                                <input class="form-control " id="recintos1_Casilla"
+                                                                    name="recintos1.Casilla"
+                                                                    placeholder="Ingrese Casilla" type="text" value="">
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.Casilla"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="tipvia" class="form-group mb-3">
+                                                                <label class="form-label">Tipo Vía</label>
+                                                                <select class="form-select " id="tipoviadropdownlist"
+                                                                    name="recintos1.TipoVia">
+                                                                    <option value="">Seleccione</option>
+                                                                    <option value="1">Calle</option>
+                                                                    <option value="2">Avenida</option>
+                                                                </select>
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.TipoVia"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div id="nombvia" class="form-group mb-3">
+                                                                <label for="NombreVia" class="form-label">Nombre
+                                                                    Vía</label>
+                                                                <input class="form-select  is-invalid" id="NombreVia"
+                                                                    name="recintos1.NombreVia"
+                                                                    placeholder="Ingrese Nombre Vía" required="required"
+                                                                    type="text" value="">
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.NombreVia"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div id="numvia" class="form-group mb-3">
+                                                                <label for="NumeroVia" class="form-label">Numero
+                                                                    Vía</label>
+                                                                <input class="form-control  is-valid" id="NumeroVia"
+                                                                    name="recintos1.NumeroVia"
+                                                                    placeholder="Ingrese Número Vía" type="text"
+                                                                    value="">
+                                                                <span class="text-danger field-validation-valid"
+                                                                    data-valmsg-for="recintos1.NumeroVia"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label class="form-label">Longitud</label>
+                                                                <input class="form-control " id="_Longitud"
+                                                                    maxlength="18" name="recintos1.Longitud"
+                                                                    onkeypress="return LatitudLongitud(event)"
+                                                                    type="text" value="">
+                                                                <span class="help-block"></span>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label class="form-label">Latitud</label>
+                                                                <input class="form-control " maxlength="18"
+                                                                    name="recintos1.Latitud"
+                                                                    onkeypress="return LatitudLongitud(event)"
+                                                                    type="text" value="">
+                                                                <span class="help-block"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                
+
+                                <div class="row no-gutters align-items-center  mt-2">
+                                    <div id="panel-edit-8" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4">
+                                        <div class="accordion" id="accordionDocumentacion">
+                                            <div class="accordion-item border-no-redondeado">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseDocumentacion" aria-expanded="true"
+                                                        aria-controls="collapseDocumentacion">
+                                                        Documentación
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseDocumentacion" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne"
+                                                    data-bs-parent="#accordionDocumentacion">
+                                                    <div class="accordion-body row">
+                                                        <div class=" float-end">
+                                                            <button
+                                                                class=" float-end btn btn-agregar agregar_archivo_boton"
+                                                                id="btn_add_file_extra"><i
+                                                                    class="fas fa-plus-circle"></i> Agregar otro
+                                                                documento</button>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="input_archivos_wrap">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                                                        <label class="form-label">Tipo
+                                                                            documento</label>
+                                                                        <select class="form-select"
+                                                                            id="tipoDocdropdownlist" name="TipoArchivo"
+                                                                            required="required">
+                                                                            <option value="">Seleccione</option>
+                                                                            <option value="1">Resolución</option>
+                                                                            <option value="2">Convenio madre</option>
+                                                                            <option value="7">Otros</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                                                        <label class="form-label">Adjuntar
+                                                                            archivo</label>
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="file" class="form-control"
+                                                                                id="inputGroupFile02">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                                                        <div class="form-group">
+                                                                            <label
+                                                                                class="form-label">Cancelar</label><br>
+                                                                            <button class="btn btn-danger clear_field"
+                                                                                type="button"><i
+                                                                                    class="fa fa-minus-circle"></i></button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div id="ir-arriba">
+                    <div class="container">
+                        <a>
+                            <i class="btn btn-primario fas fa-chevron-up ir-arriba" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/subir.js"></script>
+</body>
+
+
+</html>

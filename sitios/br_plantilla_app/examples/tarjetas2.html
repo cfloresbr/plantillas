@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar ">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="../examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="../examples/index.html">
+            <img class="logobase" src="../img/logo-BR.png">
+            <img class="logosimple" src="../img/logo-simple-BR.png">
+        </a>
+
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <div class="ms-auto me-0 me-md-3 my-2 my-md-0">
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user fa-fw me-1"></i>   <span class="d-none d-md-inline">Nombre Apellido</span>
+
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../examples/cambiar-contrasena.html"><i
+                                    class="fas fa-key me-2"></i>Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item" href="../examples/preguntas.html"><i
+                                    class="fas fa-user-lock me-2"></i>Preguntas de seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item" href="#!"><i class="fas fa-door-open me-2"></i>Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/form1.html">Inputs</a>
+                                <a class="nav-link submenu-opcion" href="../examples/buscador.html">Buscador</a>
+                                <a class="nav-link submenu-opcion" href="../examples/form2.html">Detalle</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link menu-opcion" href="../examples/autoAyuda.html">
+                            <i class="fas fa-question-circle sb-nav-link-icon"></i>
+                            <span class="text-sidebar">AutoAyuda</span>
+                        </a>
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Interface</div> -->
+
+                        <!--Principal con submenu
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>                                
+                                <span class="text-sidebar">Diseños</span>
+                                <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>-->
+                        <!--Submenu
+                                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="layout-static.html">Navegación estática</a>
+                                        <a class="nav-link submenu-opcion" href="layout-sidenav-light.html">Ligero desplazamiento</a>
+                                    </nav>
+                                </div>-->
+
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Addons</div> -->
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/tabla-mantenedor.html">Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="../examples/tables.html">Tablas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/datatables.html">DataTables</a>
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMantenedor" aria-expanded="false"
+                            aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/listadoRegion.html">Ejemplo registros</a>
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseFunciones" aria-expanded="false"
+                                    aria-controls="pagesCollapseFunciones">
+                                    Operaciones
+                                    <div class="sb-sidenav-collapse-arrow"><i
+                                            class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/crearRegion.html">Crear</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/editarRegion.html">Editar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/eliminarRegion.html">Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/desactivarRegion.html">Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/modales.html">Modales</a>
+                                <a class="nav-link submenu-opcion" href="../examples/modales-operaciones.html">Alertas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/autoAyuda.html">Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/acordeon.html">Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="../examples/pestanas.html">Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/login.html">Login</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_fail.html">Login error</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/recuperar-clave.html">Recuperar
+                                            Clave</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_secreta.html">Pregunta
+                                            secreta</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_contrasena.html">Cambio
+                                            password</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_cambio_ok.html">Cambio
+                                            correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i
+                                            class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/sesion-caducada.html">Sesión
+                                            caducada</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/404.html">Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento.html">Mantenimiento</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/mantenimiento-nobr.html">Mantenimiento No BR</a>                                                
+                                            </nav>
+                                </div>
+                                <a class="nav-link submenu-opcion" href="../examples/ayuda.html">Ayuda</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sb-sidenav-footer">
+                    <span class="smallest text-sidebar-footer mr-2">Un servicio de</span>
+                    <img src="../img/logo-BR-vertical.png" class="img-fluid" alt="Responsive image">
+                </div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title mb-3"> <!--border-title-->
+                            <h1 class="h1-aplicaciones-br">Etiam rhoncus <small>Bienvenido/a</small></h1>
+                        </div>
+
+                        <div class="alert alert-primary d-flex align-items-center notificacion-info" role="alert">
+                            <i class="fas fa-info-circle flex-shrink-0 me-2"></i>
+                            <div class="notificacion">
+                                Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                            </div>
+                        </div>
+                        <div class="contenedor mt-4">
+                            <div class="row no-gutters align-items-center  m-4">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                    <div class="card border-card border-no-redondeado tarjeta-azul azul-medio">
+                                        <div class="card-body m-3 ">
+                                            <div class="row no-gutters align-items-center ">
+                                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-4">
+                                                    <span>
+                                                        <i class="fa fa-university tamañoIcono"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-6">
+                                                    <h3 class="text-card">
+                                                        Lorem ipsum
+                                                    </h3>
+                                                </div>
+                                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-end">
+                                                    <span class="pull-end tamañoIcono">
+                                                        <i class="fas fa-chevron-right"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                    <div class="card border-card border-no-redondeado tarjeta-azul azul-medio">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-4 ">
+                                                    <span>
+                                                        <i class="fas fa-retweet tamañoIcono"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-6">
+                                                    <h3 class="text-card">
+                                                        Lorem ipsum
+                                                    </h3>
+                                                </div>
+                                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-end">
+                                                    <span class="pull-end tamañoIcono">
+                                                        <i class="fas fa-chevron-right"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                    <div class="card border-card border-no-redondeado tarjeta-azul azul-medio">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-4">
+                                                    <span>
+                                                        <i class="far fa-file-alt tamañoIcono"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-6">
+                                                    <h3 class="text-card">
+                                                        Lorem ipsum
+                                                    </h3>
+                                                </div>
+                                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-end">
+                                                    <span class="pull-end tamañoIcono">
+                                                        <i class="fas fa-chevron-right"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contenedor mt-4">
+                            <div class="row no-gutters align-items-center  m-4">
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 my-2">
+                                    <div class="card card-gris sin-border border-no-redondeado">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-4 col-sm-4 col-md-4 col-lg-12 col-xl-5 text-center  ">
+                                                    <span>
+                                                        <i class="fas fa-chart-line  tamañoIcono color-celeste"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-8 col-sm-8 col-md-8 col-lg-12 col-xl-7">
+                                                    <h4 class="titulo-pequeño">Oferta de hoy</h4>
+                                                    <h4 class="titulo-pequeño fw-bold">$1234</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 my-2">
+                                    <div class="card card-gris sin-border border-no-redondeado">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-4 col-sm-4 col-md-4 col-lg-12 col-xl-5 text-center ">
+                                                    <span>
+                                                        <i class="fas fa-chart-bar tamañoIcono color-verdeAgua"></i>
+
+                                                    </span>
+                                                </div>
+                                                <div class="col-8 col-sm-8 col-md-8 col-lg-12 col-xl-7">
+                                                    <h4 class="titulo-pequeño">Oferta de hoy</h4>
+                                                    <h4 class="titulo-pequeño fw-bold">$1234</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 my-2">
+                                    <div class="card card-gris sin-border border-no-redondeado">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-4 col-sm-4 col-md-4 col-lg-12 col-xl-5 text-center  ">
+                                                    <span>
+                                                        <i
+                                                            class="fas fa-chart-area tamañoIcono color-amarilloFuerte"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-8 col-sm-8 col-md-8 col-lg-12 col-xl-7">
+                                                    <h4 class="titulo-pequeño">Oferta de hoy</h4>
+                                                    <h4 class="titulo-pequeño fw-bold">$1234</h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 my-2">
+                                    <div class="card card-gris sin-border border-no-redondeado">
+                                        <div class="card-body m-3">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-4 col-sm-4 col-md-4 col-lg-12 col-xl-5 text-center  ">
+                                                    <span>
+                                                        <i class="fas fa-chart-pie tamañoIcono color-rojo"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="col-8 col-sm-8 col-md-8 col-lg-12 col-xl-7">
+                                                    <h4 class="titulo-pequeño">Oferta de hoy</h4>
+                                                    <h4 class="titulo-pequeño fw-bold">$1234</h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="../js/vendor/bootstrap/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="../js/vendor/bootstrap-select/css/bootstrap-select.min.css" media="all">
+    
+    <link href="../js/vendor/dataTables/datatables.min.css" rel="stylesheet" media="all" />
+    <link href="../js/vendor/dataTables/dataTables.bootstrap5.min.css" rel="stylesheet" media="all" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/tabla.css" rel="stylesheet" media="all" />
+
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="examples/index.html">
+            <img class="logobase" src="../img/logo-serviceit.png">
+            <img class="logosimple" src="../img/logo-serviceit.png">
+        </a>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+<div>
+                <h6 class="m-0 fst-italic"><img class="mb-1 me-2" src="../img/sga-logo.svg">Nombre aplicación</h6>
+            </div>
+
+            
+        <div class="ms-auto me-0 my-md-0 pr-3 btn">
+            <!--<div class="float-start me-1">
+                <span class="" style="color:#5e78b2!important">Cliente seleccionado:</span>
+                <select class="select-header">
+                    <option>Nombre cliente A</option>
+                    <option>Nombre cliente A</option>
+                </select>
+            </div>-->
+            <div class="float-start p-0">
+                <!--<button class="btn btn-usuario color-icon">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="" style="color:#5e78b2!important">Cliente seleccionado: </span>
+                            <span class="d-none d-md-inline fw-bold">Nombre cliente A</span>
+    
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>-->
+                <span class="d-none d-md-inline azul">Cliente seleccionado: </span>
+                <button class="btn color-icon px-0">
+                    <li class="nav-item dropdown " style="list-style: none;">
+                        <a class="link-header dropdown-toggle me-1 nav-user px-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="azul fw-bold">Nombre cliente A</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>
+            </div>
+            
+            <button class="float-start btn-ayuda me-0 px-0">
+                <a class="btn" href="ayuda.html">
+                <i class="fas fa-circle-question fa-fw me-1 m-0 color-icon"></i><span class="d-none d-sm-inline">Ayuda</span> 
+                </a>
+            </button>
+
+            <button class="btn btn-usuario color-icon px-0">
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a class="link-header dropdown-toggle me-1 nav-user " id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <circle><i class="fas fa-user fa-fw me-1 color-icon"></i></circle><span class="d-none d-md-inline">Nombre Apellido</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item pe-2" href="cambiar-contrasena.html"><i class="fas fa-key color-icon2"></i> Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item pe-2" href="preguntas.html"><i class="fas fa-user-lock color-icon2"></i> Preguntas de seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open color-icon2"></i> Salir</a></li>
+                    </ul>
+                </li>
+            </button>
+        </div>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="form1.html"><i class="fas fa-circle me-2 fz-8"></i>Inputs</a>
+                                <a class="nav-link submenu-opcion" href="buscador.html"><i class="fas fa-circle me-2 fz-8"></i>Buscador</a>
+                                <a class="nav-link submenu-opcion" href="form2.html"><i class="fas fa-circle me-2 fz-8"></i>Detalle</a>
+                            </nav>
+                        </div>
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="tabla-mantenedor.html"><i class="fas fa-circle me-2 fz-8"></i>Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="tables.html"><i class="fas fa-circle me-2 fz-8"></i>Tablas</a>
+                                
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="listadoRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Ejemplo registros</a>
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    <i class="fas fa-circle me-2 fz-8"></i>Operaciones
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav ms-2">
+                                        <a class="nav-link submenu-opcion" href="crearRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Crear</a>
+                                        <a class="nav-link submenu-opcion" href="editarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Editar</a>
+                                        <a class="nav-link submenu-opcion" href="eliminarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="desactivarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="modales.html"><i class="fas fa-circle me-2 fz-8"></i>Modales</a>
+                                <a class="nav-link submenu-opcion" href="modales-operaciones.html"><i class="fas fa-circle me-2 fz-8"></i>Alertas</a>
+                                <a class="nav-link submenu-opcion" href="autoAyuda.html"><i class="fas fa-circle me-2 fz-8"></i>Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="acordeon.html"><i class="fas fa-circle me-2 fz-8"></i>Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="pestanas.html"><i class="fas fa-circle me-2 fz-8"></i>Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="login.html"><i class="fas fa-circle me-2 fz-8"></i>Login</a>
+                                        <a class="nav-link submenu-opcion" href="login_fail.html"><i class="fas fa-circle me-2 fz-8"></i>Login error</a>
+                                        <a class="nav-link submenu-opcion" href="recuperar-clave.html"><i class="fas fa-circle me-2 fz-8"></i>Recuperar Clave</a>
+                                        <a class="nav-link submenu-opcion" href="login_secreta.html"><i class="fas fa-circle me-2 fz-8"></i>Pregunta secreta</a>
+                                        <a class="nav-link submenu-opcion" href="login_contrasena.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio password</a>
+                                        <a class="nav-link submenu-opcion" href="login_cambio_ok.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="sesion-caducada.html"><i class="fas fa-circle me-2 fz-8"></i>Sesión caducada</a>
+                                        <a class="nav-link submenu-opcion" href="404.html"><i class="fas fa-circle me-2 fz-8"></i>Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="mantenimiento.html"><i class="fas fa-circle me-2 fz-8"></i>Mantenimiento</a>
+                                                                                        
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Distribuido por:</span>
+                    <img class="text-sidebar-footer" style="width: 120px;" src="../img/logo-serviceit.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <div class="border-title px-0"> <!--border-title-->
+                        <h1 class="h1-aplicaciones-br">Datatables</h1>
+                    </div>
+                    <br>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            DataTable Example
+                        </div>
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>2011/07/25</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2012/03/29</td>
+                                        <td>$433,060</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>33</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brielle Williamson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2012/12/02</td>
+                                        <td>$372,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Herrod Chandler</td>
+                                        <td>Sales Assistant</td>
+                                        <td>San Francisco</td>
+                                        <td>59</td>
+                                        <td>2012/08/06</td>
+                                        <td>$137,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rhona Davidson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Tokyo</td>
+                                        <td>55</td>
+                                        <td>2010/10/14</td>
+                                        <td>$327,900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colleen Hurst</td>
+                                        <td>Javascript Developer</td>
+                                        <td>San Francisco</td>
+                                        <td>39</td>
+                                        <td>2009/09/15</td>
+                                        <td>$205,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sonya Frost</td>
+                                        <td>Software Engineer</td>
+                                        <td>Edinburgh</td>
+                                        <td>23</td>
+                                        <td>2008/12/13</td>
+                                        <td>$103,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jena Gaines</td>
+                                        <td>Office Manager</td>
+                                        <td>London</td>
+                                        <td>30</td>
+                                        <td>2008/12/19</td>
+                                        <td>$90,560</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quinn Flynn</td>
+                                        <td>Support Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2013/03/03</td>
+                                        <td>$342,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charde Marshall</td>
+                                        <td>Regional Director</td>
+                                        <td>San Francisco</td>
+                                        <td>36</td>
+                                        <td>2008/10/16</td>
+                                        <td>$470,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haley Kennedy</td>
+                                        <td>Senior Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>43</td>
+                                        <td>2012/12/18</td>
+                                        <td>$313,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tatyana Fitzpatrick</td>
+                                        <td>Regional Director</td>
+                                        <td>London</td>
+                                        <td>19</td>
+                                        <td>2010/03/17</td>
+                                        <td>$385,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Silva</td>
+                                        <td>Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>66</td>
+                                        <td>2012/11/27</td>
+                                        <td>$198,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Byrd</td>
+                                        <td>Chief Financial Officer (CFO)</td>
+                                        <td>New York</td>
+                                        <td>64</td>
+                                        <td>2010/06/09</td>
+                                        <td>$725,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gloria Little</td>
+                                        <td>Systems Administrator</td>
+                                        <td>New York</td>
+                                        <td>59</td>
+                                        <td>2009/04/10</td>
+                                        <td>$237,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bradley Greer</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>41</td>
+                                        <td>2012/10/13</td>
+                                        <td>$132,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dai Rios</td>
+                                        <td>Personnel Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>35</td>
+                                        <td>2012/09/26</td>
+                                        <td>$217,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenette Caldwell</td>
+                                        <td>Development Lead</td>
+                                        <td>New York</td>
+                                        <td>30</td>
+                                        <td>2011/09/03</td>
+                                        <td>$345,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yuri Berry</td>
+                                        <td>Chief Marketing Officer (CMO)</td>
+                                        <td>New York</td>
+                                        <td>40</td>
+                                        <td>2009/06/25</td>
+                                        <td>$675,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td>21</td>
+                                        <td>2011/12/12</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Doris Wilder</td>
+                                        <td>Sales Assistant</td>
+                                        <td>Sidney</td>
+                                        <td>23</td>
+                                        <td>2010/09/20</td>
+                                        <td>$85,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Angelica Ramos</td>
+                                        <td>Chief Executive Officer (CEO)</td>
+                                        <td>London</td>
+                                        <td>47</td>
+                                        <td>2009/10/09</td>
+                                        <td>$1,200,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Joyce</td>
+                                        <td>Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>42</td>
+                                        <td>2010/12/22</td>
+                                        <td>$92,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Chang</td>
+                                        <td>Regional Director</td>
+                                        <td>Singapore</td>
+                                        <td>28</td>
+                                        <td>2010/11/14</td>
+                                        <td>$357,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brenden Wagner</td>
+                                        <td>Software Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>28</td>
+                                        <td>2011/06/07</td>
+                                        <td>$206,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fiona Green</td>
+                                        <td>Chief Operating Officer (COO)</td>
+                                        <td>San Francisco</td>
+                                        <td>48</td>
+                                        <td>2010/03/11</td>
+                                        <td>$850,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shou Itou</td>
+                                        <td>Regional Marketing</td>
+                                        <td>Tokyo</td>
+                                        <td>20</td>
+                                        <td>2011/08/14</td>
+                                        <td>$163,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michelle House</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Sidney</td>
+                                        <td>37</td>
+                                        <td>2011/06/02</td>
+                                        <td>$95,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suki Burks</td>
+                                        <td>Developer</td>
+                                        <td>London</td>
+                                        <td>53</td>
+                                        <td>2009/10/22</td>
+                                        <td>$114,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prescott Bartlett</td>
+                                        <td>Technical Author</td>
+                                        <td>London</td>
+                                        <td>27</td>
+                                        <td>2011/05/07</td>
+                                        <td>$145,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Cortez</td>
+                                        <td>Team Leader</td>
+                                        <td>San Francisco</td>
+                                        <td>22</td>
+                                        <td>2008/10/26</td>
+                                        <td>$235,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Martena Mccray</td>
+                                        <td>Post-Sales support</td>
+                                        <td>Edinburgh</td>
+                                        <td>46</td>
+                                        <td>2011/03/09</td>
+                                        <td>$324,050</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unity Butler</td>
+                                        <td>Marketing Designer</td>
+                                        <td>San Francisco</td>
+                                        <td>47</td>
+                                        <td>2009/12/09</td>
+                                        <td>$85,675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Howard Hatfield</td>
+                                        <td>Office Manager</td>
+                                        <td>San Francisco</td>
+                                        <td>51</td>
+                                        <td>2008/12/16</td>
+                                        <td>$164,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hope Fuentes</td>
+                                        <td>Secretary</td>
+                                        <td>San Francisco</td>
+                                        <td>41</td>
+                                        <td>2010/02/12</td>
+                                        <td>$109,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vivian Harrell</td>
+                                        <td>Financial Controller</td>
+                                        <td>San Francisco</td>
+                                        <td>62</td>
+                                        <td>2009/02/14</td>
+                                        <td>$452,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Timothy Mooney</td>
+                                        <td>Office Manager</td>
+                                        <td>London</td>
+                                        <td>37</td>
+                                        <td>2008/12/11</td>
+                                        <td>$136,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jackson Bradshaw</td>
+                                        <td>Director</td>
+                                        <td>New York</td>
+                                        <td>65</td>
+                                        <td>2008/09/26</td>
+                                        <td>$645,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Olivia Liang</td>
+                                        <td>Support Engineer</td>
+                                        <td>Singapore</td>
+                                        <td>64</td>
+                                        <td>2011/02/03</td>
+                                        <td>$234,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bruno Nash</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>38</td>
+                                        <td>2011/05/03</td>
+                                        <td>$163,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sakura Yamamoto</td>
+                                        <td>Support Engineer</td>
+                                        <td>Tokyo</td>
+                                        <td>37</td>
+                                        <td>2009/08/19</td>
+                                        <td>$139,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thor Walton</td>
+                                        <td>Developer</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2013/08/11</td>
+                                        <td>$98,540</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Finn Camacho</td>
+                                        <td>Support Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>47</td>
+                                        <td>2009/07/07</td>
+                                        <td>$87,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serge Baldwin</td>
+                                        <td>Data Coordinator</td>
+                                        <td>Singapore</td>
+                                        <td>64</td>
+                                        <td>2012/04/09</td>
+                                        <td>$138,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zenaida Frank</td>
+                                        <td>Software Engineer</td>
+                                        <td>New York</td>
+                                        <td>63</td>
+                                        <td>2010/01/04</td>
+                                        <td>$125,250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zorita Serrano</td>
+                                        <td>Software Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>56</td>
+                                        <td>2012/06/01</td>
+                                        <td>$115,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Acosta</td>
+                                        <td>Junior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>43</td>
+                                        <td>2013/02/01</td>
+                                        <td>$75,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cara Stevens</td>
+                                        <td>Sales Assistant</td>
+                                        <td>New York</td>
+                                        <td>46</td>
+                                        <td>2011/12/06</td>
+                                        <td>$145,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hermione Butler</td>
+                                        <td>Regional Director</td>
+                                        <td>London</td>
+                                        <td>47</td>
+                                        <td>2011/03/21</td>
+                                        <td>$356,250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lael Greer</td>
+                                        <td>Systems Administrator</td>
+                                        <td>London</td>
+                                        <td>21</td>
+                                        <td>2009/02/27</td>
+                                        <td>$103,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jonas Alexander</td>
+                                        <td>Developer</td>
+                                        <td>San Francisco</td>
+                                        <td>30</td>
+                                        <td>2010/07/14</td>
+                                        <td>$86,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shad Decker</td>
+                                        <td>Regional Director</td>
+                                        <td>Edinburgh</td>
+                                        <td>51</td>
+                                        <td>2008/11/13</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Bruce</td>
+                                        <td>Javascript Developer</td>
+                                        <td>Singapore</td>
+                                        <td>29</td>
+                                        <td>2011/06/27</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donna Snider</td>
+                                        <td>Customer Support</td>
+                                        <td>New York</td>
+                                        <td>27</td>
+                                        <td>2011/01/25</td>
+                                        <td>$112,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Inicializar Datatables - español</h3>
+                            <pre>
+$('#example').DataTable({
+    language: {
+url: 'vendor/dataTables/plug-ins/1.13.4/i18n/es-ES.json',
+    }                
+});                                   
+        </pre>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Inicializar Datatables responsive</h3>
+                            Información de manejo de tablas responsivas https://datatables.net/extensions/responsive/
+                            <pre>
+$('#example').DataTable({
+    "responsive": true
+});                                   
+        </pre>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Inicialización de datos - Tabla poblada en el HTML (DOM)</h3>
+                            Se puede iniciar datatables desde una tabla HTML ya poblada solo indicando el ID de la tabla
+                            <pre>
+
+    $('#example').DataTable({
+         language: {
+    url: 'vendor/dataTables/plug-ins/1.13.4/i18n/es-ES.json',
+        }        
+    });
+
+</pre>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Inicialización de datos - AJAX</h3>
+                            Se puede Iniciar la tabla pidiendo los datos con AJAX a un servicio en el backend.
+                            <pre>
+
+    $('#example').DataTable({
+        ajax: 'URL con respuesta en JSON',
+    });
+
+</pre>
+                            <pre>
+
+    {
+      "data": [
+        [
+          "Tiger Nixon",
+          "System Architect",
+          "Edinburgh",
+          "5421",
+          "2011/04/25",
+          "$320,800"
+        ]
+    }     
+
+</pre>
+
+                            Tambien se pueden indicar el nombre de las columnas para una configuración mas optima desde
+                            la inicialización y colocar el orden que uno desea. Un ejemplo de inicialización de esta
+                            forma se encuentra mas adelante.
+
+                            <pre>
+
+    {
+      "data": [
+        [
+          "name":"Tiger Nixon",
+          "Position":"System Architect",
+          "Office":"Edinburgh",
+          "Age":"5421",
+          "Start_date":"2011/04/25",
+          "Salary":"$320,800"
+        ]
+    }     
+
+</pre>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Inicialización de datos - JSON</h3>
+                            Tambien se puede inicializar los datos de la tabla entregando el JSON a la variable data de
+                            la inicialización
+                            <pre>
+
+    $('#example').DataTable({
+        "data": jsonData
+    });
+
+</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Refrescar Datatables con información nueva</h3>
+                            A veces tenemos que refrescar la información de la tabla con datos nuevos ingresados,
+                            podemos actualizar la inicialización de la tabla de la siguiente forma
+                            <pre>
+
+$("#example").dataTable().fnDestroy();  
+
+        </pre>
+                            Para luego reinicializar la tabla.
+                            <pre>
+
+$("#example").dataTable();
+
+        </pre>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Ejemplo de inicialización con columnas con elementos HTML</h3>
+                            La estructura debe ser acorde a la estructura de columnas iniciada en el HTML, en este caso
+                            tomaremos la estructura de la tabla de ejemplo
+                            <pre>
+
+$('#example').DataTable({
+    "language": {
+        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json'
+    },
+    "data": jsonData, // Dato en json con la estructura de la tabla -> Puede ser un AJAX
+    "pageLength": 10, // Tamaño a mostrar por pagina
+    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "Todos"] ], // [Numero de records por pagina],[texto en lista a mostrar]
+    // El nombre despues de data es el nombre de cada KEY del JSON en caso de tener la estructura [{"key":value,"key":value}]
+    "columns": [ 
+      { "data": "Name" },
+      { "data": "Position" },
+      { "data": "Office" },
+      { "data": "Age" },
+      { "data": "Start_date" },
+      { "data": "Salary" }
+    ],
+    // Podemos agregar definiciones a columnas especificas, en este caso imprimiremos el "salary" en un boton html
+    "columnDefs":[
+        { 
+            "targets": 5, // Target es la columna, parte desde el index 0
+            "data": "",
+            "render": function(data, type, dataRow) 
+            {
+                // en este caso el dataRow es el array activo y se puede obtener toda la info indicando el KEY respectivo
+                return' &ltbutton class="btn btn-success btn-block"&gt'dataRow.Salary'&lt/button&gt';
+            }
+        }
+    ]      
+});        
+
+        </pre>
+
+
+                            JSON de ejemplo
+                            <pre>
+
+    {
+        "data": [{
+                "name": "Tiger Nixon",
+                "Position": "System Architect",
+                "Office": "Edinburgh",
+                "Age": "5421",
+                "Start_date": "2011/04/25",
+                "Salary": "$320,800"
+            },
+            {
+                "name": "Garrett Winters",
+                "Position": "Accountant",
+                "Office": "Tokyo",
+                "Age": "63",
+                "Start_date": "2011/07/25",
+                "Salary": "$170,750"
+            }]
+    }
+
+        </pre>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/vendor/datatables/datatables.min.js"></script>
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        $('#datatablesSimple').DataTable({
+            language: {
+                url: 'vendor/datatables/plug-ins/1.13.4/i18n/es-ES.json',
+            }
+        });
+    </script>
+</body>
+
+</html>

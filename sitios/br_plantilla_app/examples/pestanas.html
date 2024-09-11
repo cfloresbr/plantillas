@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet"> 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link href="../css/styles.css" rel="stylesheet" />
+
+
+
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+
+</head>
+<body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar ">
+            <!-- Navbar Brand-->
+            <!--<a class="navbar-brand ps-3" href="../examples/index.html">BR</a>-->
+            <a class="navbar-brand ps-3" href="../examples/index.html">
+                <img class="logobase" src="../img/logo-BR.png">
+                <img class="logosimple" src="../img/logo-simple-BR.png">
+            </a>
+            <!-- Navbar Search-->
+            <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>-->
+            <!-- Navbar-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+                <div class="ms-auto me-0 my-3 my-md-0 pr-3">
+                                    <button class="float-start btn-ayuda me-1">
+                    <a class="btn-ayuda" href="../examples/ayuda.html">
+                      <i class="fas fa-circle-question fa-fw me-1"></i><span class="d-none d-sm-inline">Ayuda</span> 
+                    </a>
+                </button>
+
+                    <ul class="navbar-nav ms-auto ms-md-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fas fa-user fa-fw me-1"></i><span class="d-none d-md-inline">Nombre Apellido</span>
+</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item pe-2" href="../examples/cambiar-contrasena.html"><i class="fas fa-key"></i>
+                                Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item pe-2" href="../examples/preguntas.html"><i class="fas fa-user-lock"></i>
+                                Preguntas de seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open"></i> Salir</a></li>
+                    </ul>
+                        </li>
+                    </ul>
+                </div>        
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu sombra-menu-lateral">
+                        <div class="nav margen-menu">
+                            <!--Separador-->
+                            <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/index.html">
+                                <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Dashboard</span>
+                            </a>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/buttons.html">
+                                <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Botones</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                                <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                                <span class="text-sidebar">Formularios</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="../examples/form1.html">Inputs</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/buscador.html">Buscador</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/form2.html">Detalle</a>
+                                </nav>
+                            </div>
+                            <!--<a class="nav-link menu-opcion" href="../examples/autoAyuda.html">
+                                <i class="fas fa-question-circle sb-nav-link-icon"></i>
+                                <span class="text-sidebar">AutoAyuda</span>
+                            </a>-->
+                            <!--Separador-->
+                            <!-- <div class="sb-sidenav-menu-heading text-sidebar">Interface</div> -->
+    
+                            <!--Principal con submenu
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>                                
+                                <span class="text-sidebar">Diseños</span>
+                                <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>-->
+                            <!--Submenu
+                                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="layout-static.html">Navegación estática</a>
+                                        <a class="nav-link submenu-opcion" href="layout-sidenav-light.html">Ligero desplazamiento</a>
+                                    </nav>
+                                </div>-->
+    
+                            <!--Separador-->
+                            <!-- <div class="sb-sidenav-menu-heading text-sidebar">Addons</div> -->
+    
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/textos.html">
+                                <i class="fas fa-font sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Estilos de textos</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <span class="text-sidebar">Tablas</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="../examples/tabla-mantenedor.html">Tabla mantenedor</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/tables.html">Tablas</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/datatables.html">DataTables</a>
+                                </nav>
+                            </div>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                                <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                                <span class="text-sidebar">Mantenedores</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="../examples/listadoRegion.html">Ejemplo registros</a>
+                                    <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                        Operaciones
+                                        <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <!--sub submenu-->
+                                    <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link submenu-opcion" href="../examples/crearRegion.html">Crear</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/editarRegion.html">Editar</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/eliminarRegion.html">Eliminar</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/desactivarRegion.html">Desactivar</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+    
+                            </div>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                                <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                                <span class="text-sidebar">Modales</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="../examples/modales.html">Modales</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/modales-operaciones.html">Alertas</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/autoAyuda.html">Autoayuda</a>
+                                </nav>
+                            </div>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/calendario.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                                <span class="text-sidebar">Calendario</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapseDespliegue" aria-expanded="false"
+                                aria-controls="collapseDespliegue">
+                                <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                                <span class="text-sidebar">Despliegues</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                        class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="../examples/acordeon.html">Acordeón</a>
+                                    <a class="nav-link submenu-opcion" href="../examples/pestanas.html">Pestañas</a>
+                                </nav>
+                            </div>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/notificaciones.html">
+                                <i class="fas fa-bell sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Notificaciones</span>
+                            </a>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="../examples/charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+    
+                                <span class="text-sidebar">Gráficos</span>
+                            </a>
+                            <!--Principal con submenu y sub sub menu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <span class="text-sidebar">Páginas</span>
+                                <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                        class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <!-- sub sub menu-->
+                                    <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                        aria-controls="pagesCollapseAuth">
+                                        Autenticación
+                                        <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link submenu-opcion" href="../examples/login.html">Login</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/login_fail.html">Login error</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/recuperar-clave.html">Recuperar
+                                                Clave</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/login_secreta.html">Pregunta
+                                                secreta</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/login_contrasena.html">Cambio
+                                                password</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/login_cambio_ok.html">Cambio
+                                                correcto</a>
+                                        </nav>
+                                    </div>
+                                    <!-- sub sub menu-->
+                                    <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                        aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                                class="fas fa-angle-down text-sidebar"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link submenu-opcion" href="../examples/sesion-caducada.html">Sesión
+                                                caducada</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/404.html">Página 404</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/mantenimiento.html">Mantenimiento</a>
+                                            <a class="nav-link submenu-opcion" href="../examples/mantenimiento-nobr.html">Mantenimiento No BR</a>                                                
+                                        </nav>
+                                    </div>
+    
+                                    <a class="nav-link submenu-opcion" href="../examples/ayuda.html">Ayuda</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sombra-menu-lateral">
+                    <div class="sb-sidenav-footer text-center m-0 ">
+                        <span class="smallest text-sidebar-footer mr-2">Un servicio de</span>
+                        <img src="../img/logo-BR-vertical.png" class="img-fluid" alt="Responsive image">
+                    </div></div>
+    
+                
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title d-flex justify-content-between">
+                            <h1 class="h1-aplicaciones-br">Pestañas</h1>
+                        </div>
+
+                        <div class="card mb-4 mt-4">
+                            <br>
+                            <div class="card-body">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Pestaña 1</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Pestaña 2</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Pestaña 3</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-4" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+                                        <form class="row g-3">
+                                            <div class="col-md-6">
+                                              <label for="inputEmail4" class="form-label">Input 1</label>
+                                              <input type="email" class="form-control" id="inputEmail4">
+                                            </div>
+                                            <div class="col-md-6">
+                                              <label for="inputPassword4" class="form-label">Input 2</label>
+                                              <input type="password" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="col-12">
+                                              <button type="submit" class="btn w-100 btn-crear">Ingresar</button>
+                                            </div>
+                                          </form>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="card" aria-hidden="true">
+                                            <div class="card-body">
+                                              <h5 class="card-title placeholder-glow">
+                                                <span class="placeholder col-6"></span>
+                                              </h5>
+                                              <p class="card-text placeholder-glow">
+                                                <span class="placeholder col-7"></span>
+                                                <span class="placeholder col-4"></span>
+                                                <span class="placeholder col-4"></span>
+                                                <span class="placeholder col-6"></span>
+                                                <span class="placeholder col-8"></span>
+                                              </p>
+                                              <a class="btn btn-primary disabled placeholder col-6"></a>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                                        <p>
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                              Click para mostrar mensaje
+                                            </button>
+                                          </p>
+                                          <div class="custom-collapse-container">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                              <div class="card card-body custom-card-width">
+                                                Esto es un ejemplo para contenido que abre horizontalmente. Está escondido por defecto y se muestra cuando se activa.
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 mb-4">
+                                    <div class="card-body">
+                                        <h3>Ejemplo básico de pestañas</h3>
+                                <pre>
+                                
+&lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"&gt;Home&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"&gt;Profile&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"&gt;Contact&lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content mt-4" id="myTabContent"&gt;
+    &lt;div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+                                
+                                </pre>
+                                    </div>
+                                </div>  
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="card mb-4 mt-4 pb-4">
+                            <br>
+                            <div class="card-body">
+
+
+                                <div class="accordion" id="accordionUbicacion">
+                                    <div class="accordion-item border-no-redondeado">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUbicacion" aria-expanded="true" aria-controls="collapseUbicacion">
+                                                Ubicacion
+                                            </button>
+                                        </h2>
+                                        <div id="collapseUbicacion" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionUbicacion">
+                                            <div class="accordion-body row">
+                                            <!-- Body acordeon -->
+
+                                                <!-- TABS-->
+                                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                      <button class="nav-link active" id="pestanab1-tab" data-bs-toggle="tab" data-bs-target="#pestanab1" type="button" role="tab" aria-controls="pestanab1" aria-selected="true">Pestaña 1</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                      <button class="nav-link" id="pestanab2-tab" data-bs-toggle="tab" data-bs-target="#pestanab2" type="button" role="tab" aria-controls="pestanab2" aria-selected="false">Pestaña 2</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                      <button class="nav-link" id="pestanab3-tab" data-bs-toggle="tab" data-bs-target="#pestanab3" type="button" role="tab" aria-controls="pestanab3" aria-selected="false">Pestaña 3</button>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content mt-4" id="myTabContent">
+                                                    <div class="tab-pane fade show active" id="pestanab1" role="tabpanel" aria-labelledby="pestanab1-tab">
+                
+                                                        <div class="row">
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="region" class="mb-3">
+                                                                <label for="regiondropdownlist" class="form-label">Región</label>
+                                                                <select class="form-select  is-invalid">
+                                                                    <option value="">Seleccione</option>
+                                                                </select>
+                                                                <span class="form-text"></span>
+                                                            </div>
+                                                            <div id="comuna" class="mb-3">
+                                                                <label for="CodigoComuna" class="form-label">Comuna</label>
+                                                                <select class="form-select " data-val="true">
+                                                                    <option value="">Seleccione</option>
+                                                                </select>
+                
+                                                                <span class="form-text"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="recintos1_LocalidadRecinto">Localidad</label>
+                                                                <input class="form-control  is-valid" id="recintos1_LocalidadRecinto" name="recintos1.LocalidadRecinto" onkeypress="return soloLetras(event)" placeholder="Ingrese Localidad" type="text" value="">
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.LocalidadRecinto" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="recintos1_CodigoPostal">Codigo Postal</label>
+                                                                <input class="form-control  is-valid" id="recintos1_CodigoPostal" name="recintos1.CodigoPostal" placeholder="Ingrese Código Postal" type="text" value="">
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.CodigoPostal" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Casilla" class="form-label">Casilla</label>
+                                                                <input class="form-control " id="recintos1_Casilla" name="recintos1.Casilla" placeholder="Ingrese Casilla" type="text" value="">
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.Casilla" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-6">
+                                                            <div id="tipvia" class="form-group mb-3">
+                                                                <label class="form-label">Tipo Vía</label>
+                                                                <select class="form-select " id="tipoviadropdownlist" name="recintos1.TipoVia">
+                                                                    <option value="">Seleccione</option>
+                                                                    <option value="1">Calle</option>
+                                                                    <option value="2">Avenida</option>
+                                                                </select>
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.TipoVia" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div id="nombvia" class="form-group mb-3">
+                                                                <label for="NombreVia" class="form-label">Nombre
+                                                                    Vía</label>
+                                                                <input class="form-select  is-invalid" id="NombreVia" name="recintos1.NombreVia" placeholder="Ingrese Nombre Vía" required="required" type="text" value="">
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.NombreVia" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div id="numvia" class="form-group mb-3">
+                                                                <label for="NumeroVia" class="form-label">Numero
+                                                                    Vía</label>
+                                                                <input class="form-control  is-valid" id="NumeroVia" name="recintos1.NumeroVia" placeholder="Ingrese Número Vía" type="text" value="">
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="recintos1.NumeroVia" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label class="form-label">Longitud</label>
+                                                                <input class="form-control " id="_Longitud" maxlength="18" name="recintos1.Longitud" onkeypress="return LatitudLongitud(event)" type="text" value="">
+                                                                <span class="help-block"></span>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label class="form-label">Latitud</label>
+                                                                <input class="form-control " maxlength="18" name="recintos1.Latitud" onkeypress="return LatitudLongitud(event)" type="text" value="">
+                                                                <span class="help-block"></span>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                
+                
+                                                    </div>
+                                                    <div class="tab-pane fade" id="pestanab2" role="tabpanel" aria-labelledby="pestanab2-tab">
+                                                        <div class="card" aria-hidden="true">
+                                                            <div class="card-body">
+                                                              <h5 class="card-title placeholder-glow">
+                                                                <span class="placeholder col-6"></span>
+                                                              </h5>
+                                                              <p class="card-text placeholder-glow">
+                                                                <span class="placeholder col-7"></span>
+                                                                <span class="placeholder col-4"></span>
+                                                                <span class="placeholder col-4"></span>
+                                                                <span class="placeholder col-6"></span>
+                                                                <span class="placeholder col-8"></span>
+                                                              </p>
+                                                              <a class="btn btn-primary disabled placeholder col-6"></a>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="pestanab3" role="tabpanel" aria-labelledby="pestanab3-tab">
+                
+                                                        <p>
+                                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+                                                              Click para mostrar mensaje
+                                                            </button>
+                                                          </p>
+                                                          <div class="custom-collapse-container">
+                                                            <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+                                                              <div class="card card-body custom-card-width">
+                                                                Esto es un ejemplo para contenido que abre horizontalmente. Está escondido por defecto y se muestra cuando se activa.
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                
+                                                    </div>
+                                                </div>
+                                                <!-- FIN TABS-->                                            
+                                            </div>
+                                            <!-- FIN BODY ACORDEON-->    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+
+    <script src="../js/vendor/chartjs/Chart.2.8.0.min.js"></script>
+    <script src="../js/assets/demo/chart-area-demo.js"></script>
+    <script src="../js/assets/demo/chart-bar-demo.js"></script>
+
+    <script src="../js/vendor/simple_datatable/simple-datatables.min.js"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+    
+</body>
+
+
+</html>

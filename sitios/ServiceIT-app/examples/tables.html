@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tables - SB Admin</title>
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar">
+            <!-- Navbar Brand-->
+            <!--<a class="navbar-brand ps-3" href="examples/index.html">BR</a>-->
+            <a class="navbar-brand ps-3" href="examples/index.html">
+                <img class="logobase" src="../img/logo-serviceit.png">
+                <img class="logosimple" src="../img/logo-serviceit.png">
+            </a>
+            <!-- Navbar Search-->
+            <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>-->
+            <!-- Navbar-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+                <div>
+                    <h6 class="m-0 fst-italic d-none d-lg-inline azul"><img class="mb-1 me-2" src="../img/sga-logo.svg">Nombre aplicación</h6>
+                </div>
+    
+                
+            <div class="ms-auto me-0 my-md-0 pr-3 btn">
+                <!--<div class="float-start me-1">
+                    <span class="" style="color:#5e78b2!important">Cliente seleccionado:</span>
+                    <select class="select-header">
+                        <option>Nombre cliente A</option>
+                        <option>Nombre cliente A</option>
+                    </select>
+                </div>-->
+                <div class="float-start p-0">
+                    <!--<button class="btn btn-usuario color-icon">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="" style="color:#5e78b2!important">Cliente seleccionado: </span>
+                                <span class="d-none d-md-inline fw-bold">Nombre cliente A</span>
+        
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                            </ul>
+                        </li>
+                    </button>-->
+                    <span class="d-none d-xl-inline azul">Cliente seleccionado: </span>
+                    <button class="btn color-icon px-0">
+                        <li class="nav-item dropdown " style="list-style: none;">
+                            <a class="link-header dropdown-toggle me-1 nav-user px-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="azul fw-bold">Nombre cliente A</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                                <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                            </ul>
+                        </li>
+                    </button>
+                </div>
+                
+                <button class="float-start btn-ayuda me-0 px-0">
+                    <a class="btn" href="ayuda.html">
+                    <i class="fas fa-circle-question fa-fw me-1 m-0 color-icon"></i><span class="d-none d-md-inline">Ayuda</span> 
+                    </a>
+                </button>
+    
+                <button class="btn btn-usuario color-icon px-0">
+                    <li class="nav-item dropdown" style="list-style: none;">
+                        <a class="link-header dropdown-toggle me-1 nav-user " id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <circle><i class="fas fa-user fa-fw me-1 color-icon"></i></circle><span class="d-none d-md-inline">Nombre Apellido</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href="cambiar-contrasena.html"><i class="fas fa-key color-icon2"></i> Cambiar contraseña</a></li>
+                            <li><a class="dropdown-item pe-2" href="preguntas.html"><i class="fas fa-user-lock color-icon2"></i> Preguntas de seguridad</a></li>
+                            <!--<li><hr class="dropdown-divider" /></li>-->
+                            <li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open color-icon2"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                </button>
+            </div>
+    
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu sombra-menu-lateral">
+                        <div class="nav margen-menu">
+                            <!--Separador-->
+                            <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="index.html">
+                                <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Dashboard</span>
+                            </a>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="buttons.html">
+                                <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Botones</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                                <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                                <span class="text-sidebar">Formularios</span>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="form1.html"><i class="fas fa-circle me-2 fz-8"></i>Inputs</a>
+                                    <a class="nav-link submenu-opcion" href="buscador.html"><i class="fas fa-circle me-2 fz-8"></i>Buscador</a>
+                                    <a class="nav-link submenu-opcion" href="form2.html"><i class="fas fa-circle me-2 fz-8"></i>Detalle</a>
+                                </nav>
+                            </div>
+    
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="textos.html">
+                                <i class="fas fa-font sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Estilos de textos</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <span class="text-sidebar">Tablas</span>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="tabla-mantenedor.html"><i class="fas fa-circle me-2 fz-8"></i>Tabla mantenedor</a>
+                                    <a class="nav-link submenu-opcion" href="tables.html"><i class="fas fa-circle me-2 fz-8"></i>Tablas</a>
+                                    
+                                </nav>
+                            </div>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                                <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                                <span class="text-sidebar">Mantenedores</span>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="listadoRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Ejemplo registros</a>
+                                    <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                        <i class="fas fa-circle me-2 fz-8"></i>Operaciones
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <!--sub submenu-->
+                                    <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav ms-2">
+                                            <a class="nav-link submenu-opcion" href="crearRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Crear</a>
+                                            <a class="nav-link submenu-opcion" href="editarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Editar</a>
+                                            <a class="nav-link submenu-opcion" href="eliminarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Eliminar</a>
+                                            <a class="nav-link submenu-opcion" href="desactivarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Desactivar</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+    
+                            </div>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                                <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                                <span class="text-sidebar">Modales</span>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="modales.html"><i class="fas fa-circle me-2 fz-8"></i>Modales</a>
+                                    <a class="nav-link submenu-opcion" href="modales-operaciones.html"><i class="fas fa-circle me-2 fz-8"></i>Alertas</a>
+                                    <a class="nav-link submenu-opcion" href="autoAyuda.html"><i class="fas fa-circle me-2 fz-8"></i>Autoayuda</a>
+                                </nav>
+                            </div>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="calendario.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                                <span class="text-sidebar">Calendario</span>
+                            </a>
+                            <!--Principal con submenu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapseDespliegue" aria-expanded="false"
+                                aria-controls="collapseDespliegue">
+                                <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                                <span class="text-sidebar">Despliegues</span>
+                                <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                        class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="acordeon.html"><i class="fas fa-circle me-2 fz-8"></i>Acordeón</a>
+                                    <a class="nav-link submenu-opcion" href="pestanas.html"><i class="fas fa-circle me-2 fz-8"></i>Pestañas</a>
+                                </nav>
+                            </div>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="notificaciones.html">
+                                <i class="fas fa-bell sb-nav-link-icon"></i>
+                                <span class="text-sidebar">Notificaciones</span>
+                            </a>
+                            <!--Principal-->
+                            <a class="nav-link menu-opcion" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+    
+                                <span class="text-sidebar">Gráficos</span>
+                            </a>
+                            <!--Principal con submenu y sub sub menu-->
+                            <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <span class="text-sidebar">Páginas</span>
+                                <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                        class="fas fa-angle-down text-sidebar"></i></div>
+                            </a>
+                            <!--Submenu-->
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <!-- sub sub menu-->
+                                    <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autenticación
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link submenu-opcion" href="login.html"><i class="fas fa-circle me-2 fz-8"></i>Login</a>
+                                            <a class="nav-link submenu-opcion" href="login_fail.html"><i class="fas fa-circle me-2 fz-8"></i>Login error</a>
+                                            <a class="nav-link submenu-opcion" href="recuperar-clave.html"><i class="fas fa-circle me-2 fz-8"></i>Recuperar Clave</a>
+                                            <a class="nav-link submenu-opcion" href="login_secreta.html"><i class="fas fa-circle me-2 fz-8"></i>Pregunta secreta</a>
+                                            <a class="nav-link submenu-opcion" href="login_contrasena.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio password</a>
+                                            <a class="nav-link submenu-opcion" href="login_cambio_ok.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio correcto</a>
+                                        </nav>
+                                    </div>
+                                    <!-- sub sub menu-->
+                                    <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link submenu-opcion" href="sesion-caducada.html"><i class="fas fa-circle me-2 fz-8"></i>Sesión caducada</a>
+                                            <a class="nav-link submenu-opcion" href="404.html"><i class="fas fa-circle me-2 fz-8"></i>Página 404</a>
+                                            <a class="nav-link submenu-opcion" href="mantenimiento.html"><i class="fas fa-circle me-2 fz-8"></i>Mantenimiento</a>
+                                                                                            
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sombra-menu-lateral">
+                    <div class="sb-sidenav-footer text-center m-0 ">
+                        <span class="smallest text-sidebar-footer mr-2">Distribuido por:</span>
+                        <img class="text-sidebar-footer" style="width: 120px;" src="../img/logo-serviceit.png" class="img-fluid" alt="Responsive image">
+                    </div></div>
+    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="border-title">
+                            <h1 class="mt-4">Tables</h1>
+                        </div>
+                        <br>
+                        <div class="mb-4 mt-4">
+                            
+                            <div class="card-body">
+                                <table class="table table-striped table-bordered tabla-estatica dataTable" id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td class="botones-operacion">
+                                                <div id="opciones" class="btn-group">
+                                                    <button type="button" class="btn btn-panel-editar mx-1"><i class="fas fa-pen fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-turquesa mx-1"><i class="fa fa-sitemap fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-eliminar mx-1"><i class="fas fa-trash fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-detalle mx-1"><i class="fas fa-sticky-note fa-1x" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td class="botones-operacion">
+                                                <div id="opciones" class="btn-group">
+                                                    <button type="button" class="btn btn-panel-editar mx-1"><i class="fas fa-pen fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-turquesa mx-1"><i class="fa fa-sitemap fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-eliminar mx-1"><i class="fas fa-trash fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-detalle mx-1"><i class="fas fa-sticky-note fa-1x" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                            <td class="botones-operacion">
+                                                <div id="opciones" class="btn-group">
+                                                    <button type="button" class="btn btn-panel-editar mx-1"><i class="fas fa-pen fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-turquesa mx-1"><i class="fa fa-sitemap fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-eliminar mx-1"><i class="fas fa-trash fa-1x" aria-hidden="true"></i></button>
+                                                    <button type="button" class="btn btn-panel-detalle mx-1"><i class="fas fa-sticky-note fa-1x" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+                
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js"></script>
+        
+    </body>
+</html>

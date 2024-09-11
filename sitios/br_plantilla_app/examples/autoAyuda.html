@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../js/vendor/shepherd/dist/css/shepherd.css" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar ">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="../examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="../examples/index.html">
+            <img class="logobase" src="../img/logo-BR.png">
+            <img class="logosimple" src="../img/logo-simple-BR.png">
+        </a>
+
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <div class="ms-auto me-0 me-md-3 my-2 my-md-0">
+            <button class="float-start btn-ayuda me-1">
+                <a class="btn-ayuda" href="../examples/ayuda.html">
+                    <i class="fas fa-circle-question fa-fw me-1"></i><span class="d-none d-sm-inline">Ayuda</span> 
+                </a>
+            </button>
+            
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                            class="fas fa-user fa-fw me-1 me-2"></i>Nombre Apellido</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!"><i class="fas fa-key me-2"></i>Cambiar contraseña</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#!"><i class="fas fa-user-lock me-2"></i>Preguntas de
+                                seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item" href="#!"><i class="fas fa-door-open me-2"></i>Salir</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/form1.html">Inputs</a>
+                                <a class="nav-link submenu-opcion" href="../examples/buscador.html">Buscador</a>
+                                <a class="nav-link submenu-opcion" href="../examples/form2.html">Detalle</a>
+                            </nav>
+                        </div>
+                        <!--<a class="nav-link menu-opcion" href="../examples/autoAyuda.html">
+                            <i class="fas fa-question-circle sb-nav-link-icon"></i>
+                            <span class="text-sidebar">AutoAyuda</span>
+                        </a>-->
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Interface</div> -->
+
+                        <!--Principal con submenu
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>                                
+                            <span class="text-sidebar">Diseños</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>-->
+                        <!--Submenu
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="layout-static.html">Navegación estática</a>
+                                    <a class="nav-link submenu-opcion" href="layout-sidenav-light.html">Ligero desplazamiento</a>
+                                </nav>
+                            </div>-->
+
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Addons</div> -->
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/tabla-mantenedor.html">Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="../examples/tables.html">Tablas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/datatables.html">DataTables</a>
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/listadoRegion.html">Ejemplo registros</a>
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    Operaciones
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/crearRegion.html">Crear</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/editarRegion.html">Editar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/eliminarRegion.html">Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/desactivarRegion.html">Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/modales.html">Modales</a>
+                                <a class="nav-link submenu-opcion" href="../examples/modales-operaciones.html">Alertas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/autoAyuda.html">Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/acordeon.html">Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="../examples/pestanas.html">Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/login.html">Login</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_fail.html">Login error</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/recuperar-clave.html">Recuperar
+                                            Clave</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_secreta.html">Pregunta
+                                            secreta</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_contrasena.html">Cambio
+                                            password</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_cambio_ok.html">Cambio
+                                            correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                            class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/sesion-caducada.html">Sesión
+                                            caducada</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/404.html">Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento.html">Mantenimiento</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento-nobr.html">Mantenimiento No BR</a>                                                
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link submenu-opcion" href="../examples/ayuda.html">Ayuda</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Un servicio de</span>
+                    <img src="../img/logo-BR-vertical.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4" id="contenedorAutoAyuda">
+                        <div class="border-title px-0 mb-4"> <!--border-title-->
+                            <h1 class="h1-aplicaciones-br">Auto ayuda</h1>
+                        </div>
+
+                        
+                        <div class="card mb-4 px-0" id="contenedorFunciona">
+                            <div class="card-header">
+                                Guíe a sus usuarios a través de un recorrido por su aplicación.
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12">
+                                        <!-- Agrega un elemento HTML que será el objetivo del paso -->
+
+                                        <h2>Ejemplo de Uso</h2>
+                                        <p>A continuación, se muestra un ejemplo de cómo crear una guía simple usando
+                                            ShepherdJS:</p>
+
+                                        <button id="miBoton" class="btn btn-primario">Haz clic aquí</button>
+                                        <p></p>
+                                        <span>&lt;button type=&quot;button&quot; id=&quot;miBoton&quot;&gt;&lt; class=&quot;btn btn-primario&quot;&gt;&lt; Haz clic aquí&lt;/button&gt;</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-4 px-0">
+                            <div class="card-header">
+                                Como incluirlo
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12">
+                                        <!-- Agrega un elemento HTML que será el objetivo del paso -->
+                                        <code
+                                            class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vendor/shepherd/dist/css/shepherd.css<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+                                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vendor/shepherd/dist/js/shepherd.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 px-0" id="EjemploUso">
+                            <div class="card-header">
+                                Ejemplo codigo
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="">
+                                            <pre>
+                                                <code>
+                                        
+                                                    <!-- Agrega el script para crear la guía -->
+                                                    &lt;script&gt;
+                                                    // Función para crear y ejecutar la guía
+                                                    function crearGuia() {
+                                                        // Crea una instancia de Shepherd
+                                                        const tour = new Shepherd.Tour({
+                                                            defaultStepOptions: {
+                                                                classes: 'shepherd-theme-arrows',
+                                                            },
+                                                        });
+                                            
+                                                        // Agrega los pasos
+                                                        tour.addStep({
+                                                            id: 'paso-1',
+                                                            text: 'Haz clic en este botón para comenzar.',
+                                                            attachTo: {
+                                                                element: '#miBoton',
+                                                                on: 'bottom',
+                                                            },
+                                                            buttons: [
+                                                                {
+                                                                    text: 'Siguiente',
+                                                                    action: tour.next,
+                                                                },
+                                                            ],
+                                                        });
+                                            
+                                                        // Inicia la guía
+                                                        tour.start();
+                                                    }
+                                            
+                                                    // Ejecuta la guía cuando se carga el documento
+                                                    document.addEventListener('DOMContentLoaded', function () {
+                                                        crearGuia();
+                                                    });
+                                            
+                                                    // Ejecuta la guía cuando se hace clic en el botón
+                                                    document.getElementById('miBoton').addEventListener('click', function () {
+                                                        crearGuia();
+                                                    });
+                                                    &lt;/script&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        <div class="">
+                                            <pre>
+                                                <code>
+                                                    <!-- Agrega el script para crear la guía -->
+                                                    &lt;script&gt;
+                                                    function addStepIfElementExists(stepsArray, tour) {
+                                                        const steps = [];
+                                                    
+                                                        // Iteramos a través de cada objeto en el array stepsArray
+                                                        stepsArray.forEach((stepObj, index) => {
+                                                            // Verificamos si el elemento existe, es visible y no está oculto
+                                                            if ($(stepObj.elemento).length > 0 && $(stepObj.elemento).is(":visible") && !$(stepObj.elemento).is(":hidden")) {
+                                                                // Creamos un objeto 'step' para el paso actual
+                                                                const step = {
+                                                                    classes: stepObj.classes,
+                                                                    title: stepObj.title,
+                                                                    text: stepObj.texto,
+                                                                    attachTo: {
+                                                                        element: stepObj.elemento,
+                                                                        on: stepObj.on !== undefined ? stepObj.on : 'auto',
+                                                                    },
+                                                                    buttons: [],
+                                                                    id: stepObj.id,
+                                                                };
+                                                    
+                                                                // Agregamos un botón "Anterior" para todos los pasos excepto el primero
+                                                                if (index > 0) {
+                                                                    step.buttons.push({
+                                                                        action: () => tour.back(), // Usamos el objeto 'tour' para llamar a los métodos
+                                                                        secondary: true,
+                                                                        text: 'Anterior',
+                                                                    });
+                                                                }
+                                                    
+                                                                // Agregamos un botón "Siguiente" para todos los pasos excepto el último
+                                                                if (index < stepsArray.length - 1) {
+                                                                    step.buttons.push({
+                                                                        action: () => tour.next(), // Usamos el objeto 'tour' para llamar a los métodos
+                                                                        text: 'Siguiente',
+                                                                    });
+                                                                }
+                                                    
+                                                                // Agregamos un botón "Hecho" para el último paso
+                                                                if (index === stepsArray.length - 1) {
+                                                                    step.buttons.push({
+                                                                        action: () => tour.cancel(), // Usamos el objeto 'tour' para llamar a los métodos
+                                                                        text: 'Hecho',
+                                                                    });
+                                                                }
+                                                    
+                                                                // Agregamos el paso al array de pasos
+                                                                steps.push(step);
+                                                            }
+                                                        });
+                                                    
+                                                        // Devolvemos el array de pasos
+                                                        return steps;
+                                                    }
+                                                    
+
+                                                    function startIntroData() {
+                                                        // Crear una instancia del tour Shepherd
+                                                        const tour = new Shepherd.Tour({
+                                                            defaultStepOptions: {
+                                                                // Habilitar el ícono de cancelación en cada paso
+                                                                cancelIcon: {
+                                                                    enabled: true
+                                                                },
+                                                                // Opciones de desplazamiento
+                                                                scrollTo: {
+                                                                    behavior: 'smooth',
+                                                                    block: 'center'
+                                                                }
+                                                            },
+                                                            // Inicialmente, no hay pasos en el tour
+                                                            steps: [],
+                                                            // Habilitar una superposición modal oscura de fondo
+                                                            useModalOverlay: true
+                                                        });
+                                                    
+                                                        // Definir los pasos del tour en un array
+                                                        let stepsArray = [
+                                                            {
+                                                                // Título del paso
+                                                                title: "¿Qué es ShepherdJS?",
+                                                                // Elemento objetivo que se resaltará en la página
+                                                                elemento: '#contenedorAutoAyuda',
+                                                                // Texto descriptivo del paso
+                                                                texto: "ShepherdJS es una biblioteca de JavaScript que te permite crear tutoriales y guías interactivas paso a paso para tus aplicaciones web. Puedes utilizar ShepherdJS para guiar a los usuarios a través de características o procesos importantes de tu sitio web.",
+                                                                // Posición del resaltado en relación con el elemento (en la parte inferior)
+                                                                on: "bottom",
+                                                                // Identificador único del paso
+                                                                id: "#contenedorAutoAyuda",
+                                                                // Clases CSS adicionales para personalizar el aspecto del paso
+                                                                classes: '',
+                                                            },
+                                                            {
+                                                                // Título del paso
+                                                                title: "¿Cómo funciona?",
+                                                                // Elemento objetivo que se resaltará en la página
+                                                                elemento: '#contenedorFunciona',
+                                                                // Texto descriptivo del paso
+                                                                texto: "ShepherdJS funciona mediante la creación de un conjunto de pasos que representan cada parte de la guía. Cada paso puede incluir un título, texto descriptivo y un objetivo (elemento en la página).",
+                                                                // Posición del resaltado en relación con el elemento (en la parte inferior)
+                                                                on: "bottom",
+                                                                // Identificador único del paso
+                                                                id: "#contenedorFunciona",
+                                                                // Clases CSS adicionales para personalizar el aspecto del paso
+                                                                classes: '',
+                                                            },
+                                                            {
+                                                                // Título del paso
+                                                                title: "Ejemplo de Uso",
+                                                                // Elemento objetivo que se resaltará en la página
+                                                                elemento: '#EjemploUso',
+                                                                // Texto descriptivo del paso
+                                                                texto: "A continuación, se muestra un ejemplo de cómo crear una guía simple usando ShepherdJS:",
+                                                                // Posición del resaltado en relación con el elemento (en la parte inferior)
+                                                                on: "bottom",
+                                                                // Identificador único del paso
+                                                                id: "#EjemploUso",
+                                                                // Clases CSS adicionales para personalizar el aspecto del paso
+                                                                classes: '',
+                                                            },
+                                                        ];
+                                                    
+                                                        // Utilizar la función addStepIfElementExists para verificar si los elementos objetivo existen en la página y crear los pasos correspondientes
+                                                        const steps = addStepIfElementExists(stepsArray, tour);
+                                                    
+                                                        // Agregar los pasos al tour
+                                                        tour.addSteps(steps);
+                                                    
+                                                        // Iniciar el tour
+                                                        tour.start();
+                                                    }
+                                                    
+                                            
+
+                                                    &lt;/script&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Shepherd -->
+    <script src="../js/vendor/shepherd/dist/js/shepherd.js"></script>
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Función para crear y ejecutar la guía
+        function crearGuia() {
+            // Crea una instancia de Shepherd
+            const tour = new Shepherd.Tour({
+                defaultStepOptions: {
+                    classes: 'shepherd-theme-arrows',
+                },
+            });
+
+            // Agrega los pasos
+            tour.addStep({
+                id: 'paso-1',
+                text: 'Haz clic en este botón para comenzar.',
+                attachTo: {
+                    element: '#miBoton',
+                    on: 'bottom',
+                },
+                buttons: [
+                    {
+                        text: 'Hecho',
+                        action: tour.cancel,
+                    },
+                ],
+            });
+
+            // Inicia la guía
+            tour.start();
+        }
+
+
+        function addStepIfElementExists(stepsArray, tour) {
+            const steps = [];
+
+            // Iteramos a través de cada objeto en el array stepsArray
+            stepsArray.forEach((stepObj, index) => {
+                // Verificamos si el elemento existe, es visible y no está oculto
+                if ($(stepObj.elemento).length > 0 && $(stepObj.elemento).is(":visible") && !$(stepObj.elemento).is(":hidden")) {
+                    // Creamos un objeto 'step' para el paso actual
+                    const step = {
+                        classes: stepObj.classes,
+                        title: stepObj.title,
+                        text: stepObj.texto,
+                        attachTo: {
+                            element: stepObj.elemento,
+                            on: stepObj.on !== undefined ? stepObj.on : 'auto',
+                        },
+                        buttons: [],
+                        id: stepObj.id,
+                    };
+
+                    // Agregamos un botón "Anterior" para todos los pasos excepto el primero
+                    if (index > 0) {
+                        step.buttons.push({
+                            action: () => tour.back(), // Usamos el objeto 'tour' para llamar a los métodos
+                            secondary: true,
+                            text: 'Anterior',
+                        });
+                    }
+
+                    // Agregamos un botón "Siguiente" para todos los pasos excepto el último
+                    if (index < stepsArray.length - 1) {
+                        step.buttons.push({
+                            action: () => tour.next(), // Usamos el objeto 'tour' para llamar a los métodos
+                            text: 'Siguiente',
+                        });
+                    }
+
+                    // Agregamos un botón "Hecho" para el último paso
+                    if (index === stepsArray.length - 1) {
+                        step.buttons.push({
+                            action: () => tour.cancel(), // Usamos el objeto 'tour' para llamar a los métodos
+                            text: 'Hecho',
+                        });
+                    }
+
+                    // Agregamos el paso al array de pasos
+                    steps.push(step);
+                }
+            });
+
+            // Devolvemos el array de pasos
+            return steps;
+        }
+
+        function startIntroData() {
+            const tour = new Shepherd.Tour({
+                defaultStepOptions: {
+                    cancelIcon: {
+                        enabled: true
+                    },
+                    //classes: 'class-1 class-2',
+                    scrollTo: {
+                        behavior: 'smooth',
+                        block: 'center'
+                    }
+                },
+                // This should add the first tour step
+                steps: [],
+                useModalOverlay: true
+            });
+
+            let stepsArray = [
+                {
+                    title: "¿Qué es ShepherdJS?",
+                    elemento: '#contenedorAutoAyuda',
+                    texto: "ShepherdJS es una biblioteca de JavaScript que te permite crear tutoriales y"+
+                                        "guías interactivas paso a paso para tus aplicaciones web. Puedes utilizar"+
+                                        "ShepherdJS para guiar a los usuarios a través de características o procesos"+
+                                        "importantes de tu sitio web.",
+                    on: "bottom",
+                    id: "#contenedorAutoAyuda",
+                    classes: '',
+                },
+                {
+                    title: "¿Cómo funciona?",
+                    elemento: '#contenedorFunciona',
+                    texto: "ShepherdJS funciona mediante la creación de un conjunto de pasos que representan"+
+                                        "cada parte de la guía. Cada paso puede incluir un título, texto descriptivo y un"+
+                                        "objetivo (elemento en la página).",
+                    on: "bottom",
+                    id: "#contenedorFunciona",
+                    classes: '',
+                },
+                {
+                    title: "Ejemplo de Uso",
+                    elemento: '#EjemploUso',
+                    texto: "A continuación, se muestra un ejemplo de cómo crear una guía simple usando ShepherdJS:",
+                    on: "bottom",
+                    id: "#EjemploUso",
+                    classes: '',
+                },
+            ];
+
+            const steps = addStepIfElementExists(stepsArray, tour)
+
+            tour.addSteps(steps);
+
+            tour.start();
+        }
+
+        // Ejecuta la guía cuando se carga el documento
+        document.addEventListener('DOMContentLoaded', function () {
+            crearGuia();
+        });
+
+        // Ejecuta la guía cuando se hace clic en el botón
+        document.getElementById('miBoton').addEventListener('click', function () {
+            startIntroData();
+        });
+    </script>
+</body>
+
+</html>

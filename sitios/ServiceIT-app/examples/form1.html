@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+        
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../js/vendor/bootstrap-select/css/bootstrap-select.min.css" type="text/css" />
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="examples/index.html">
+            <img class="logobase" src="../img/logo-serviceit.png">
+            <img class="logosimple" src="../img/logo-serviceit.png">
+        </a>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <div>
+                <h6 class="m-0 fst-italic d-none d-lg-inline azul"><img class="mb-1 me-2" src="../img/sga-logo.svg">Nombre aplicación</h6>
+            </div>
+
+            
+        <div class="ms-auto me-0 my-md-0 pr-3 btn">
+            <!--<div class="float-start me-1">
+                <span class="" style="color:#5e78b2!important">Cliente seleccionado:</span>
+                <select class="select-header">
+                    <option>Nombre cliente A</option>
+                    <option>Nombre cliente A</option>
+                </select>
+            </div>-->
+            <div class="float-start p-0">
+                <!--<button class="btn btn-usuario color-icon">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="" style="color:#5e78b2!important">Cliente seleccionado: </span>
+                            <span class="d-none d-md-inline fw-bold">Nombre cliente A</span>
+    
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>-->
+                <span class="d-none d-xl-inline azul">Cliente seleccionado: </span>
+                <button class="btn color-icon px-0">
+                    <li class="nav-item dropdown " style="list-style: none;">
+                        <a class="link-header dropdown-toggle me-1 nav-user px-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="azul fw-bold">Nombre cliente A</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente B</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i>Nombre cliente C</a></li>
+                            <li><a class="dropdown-item pe-2" href=""><i class="fas fa-briefcase me-1"></i> Nombre cliente D</a></li>
+                        </ul>
+                    </li>
+                </button>
+            </div>
+            
+            <button class="float-start btn-ayuda me-0 px-0">
+                <a class="btn" href="ayuda.html">
+                <i class="fas fa-circle-question fa-fw me-1 m-0 color-icon"></i><span class="d-none d-md-inline">Ayuda</span> 
+                </a>
+            </button>
+
+            <button class="btn btn-usuario color-icon px-0">
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a class="link-header dropdown-toggle me-1 nav-user " id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <circle><i class="fas fa-user fa-fw me-1 color-icon"></i></circle><span class="d-none d-md-inline">Nombre Apellido</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item pe-2" href="cambiar-contrasena.html"><i class="fas fa-key color-icon2"></i> Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item pe-2" href="preguntas.html"><i class="fas fa-user-lock color-icon2"></i> Preguntas de seguridad</a></li>
+                        <!--<li><hr class="dropdown-divider" /></li>-->
+                        <li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open color-icon2"></i> Salir</a></li>
+                    </ul>
+                </li>
+            </button>
+        </div>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="form1.html"><i class="fas fa-circle me-2 fz-8"></i>Inputs</a>
+                                <a class="nav-link submenu-opcion" href="buscador.html"><i class="fas fa-circle me-2 fz-8"></i>Buscador</a>
+                                <a class="nav-link submenu-opcion" href="form2.html"><i class="fas fa-circle me-2 fz-8"></i>Detalle</a>
+                            </nav>
+                        </div>
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="tabla-mantenedor.html"><i class="fas fa-circle me-2 fz-8"></i>Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="tables.html"><i class="fas fa-circle me-2 fz-8"></i>Tablas</a>
+                                
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="listadoRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Ejemplo registros</a>
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    <i class="fas fa-circle me-2 fz-8"></i>Operaciones
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav ms-2">
+                                        <a class="nav-link submenu-opcion" href="crearRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Crear</a>
+                                        <a class="nav-link submenu-opcion" href="editarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Editar</a>
+                                        <a class="nav-link submenu-opcion" href="eliminarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="desactivarRegion.html"><i class="fas fa-circle me-2 fz-8"></i>Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="modales.html"><i class="fas fa-circle me-2 fz-8"></i>Modales</a>
+                                <a class="nav-link submenu-opcion" href="modales-operaciones.html"><i class="fas fa-circle me-2 fz-8"></i>Alertas</a>
+                                <a class="nav-link submenu-opcion" href="autoAyuda.html"><i class="fas fa-circle me-2 fz-8"></i>Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="acordeon.html"><i class="fas fa-circle me-2 fz-8"></i>Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="pestanas.html"><i class="fas fa-circle me-2 fz-8"></i>Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="login.html"><i class="fas fa-circle me-2 fz-8"></i>Login</a>
+                                        <a class="nav-link submenu-opcion" href="login_fail.html"><i class="fas fa-circle me-2 fz-8"></i>Login error</a>
+                                        <a class="nav-link submenu-opcion" href="recuperar-clave.html"><i class="fas fa-circle me-2 fz-8"></i>Recuperar Clave</a>
+                                        <a class="nav-link submenu-opcion" href="login_secreta.html"><i class="fas fa-circle me-2 fz-8"></i>Pregunta secreta</a>
+                                        <a class="nav-link submenu-opcion" href="login_contrasena.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio password</a>
+                                        <a class="nav-link submenu-opcion" href="login_cambio_ok.html"><i class="fas fa-circle me-2 fz-8"></i>Cambio correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed submenu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="sesion-caducada.html"><i class="fas fa-circle me-2 fz-8"></i>Sesión caducada</a>
+                                        <a class="nav-link submenu-opcion" href="404.html"><i class="fas fa-circle me-2 fz-8"></i>Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="mantenimiento.html"><i class="fas fa-circle me-2 fz-8"></i>Mantenimiento</a>
+                                                                                        
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Distribuido por:</span>
+                    <img class="text-sidebar-footer" style="width: 120px;" src="../img/logo-serviceit.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title px-0"> <!--border-title-->
+                            <h1 class="h1-aplicaciones-br">Inputs</h1>
+                        </div>
+                        <div class="card mt-4 pb-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="mb-5">
+                                            <label for="lorem" class="form-label">Lorem ipsum</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese lorem ipsum"
+                                                autofocus>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+                                                placeholder=&quot;Ingrese lorem ipsum&quot; autofocus&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label for="formTipoVia" class="form-label">Tipo vía</label>
+                                            <select class="form-select" id="formTipoVia">
+                                                <option selected>Seleccione</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;select class=&quot;form-select&quot;
+                                                id=&quot;formTipoVia&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option selected&gt;Seleccione&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;1&quot;&gt;One&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;2&quot;&gt;Two&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;3&quot;&gt;Three&lt;/option&gt;
+                                                <br>&lt;/select&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label class="form-label">Multi select</label>
+                                            <select class="selectpicker" multiple data-width="auto" >
+                                                <option value="1">Mustard</option>
+                                                <option value="2">Ketchup</option>
+                                                <option value="3">Relish</option>
+                                             </select>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;select class=&quot;selectpicker&quot; multiple data-width=&quot;auto&quot;
+                                                &gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;1&quot;&gt;Mustard&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;2&quot;&gt;Ketchup&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;3&quot;&gt;Relish&lt;/option&gt;
+                                                <br>&lt;/select&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label for="formNombreVia" class="form-label">Fecha</label>
+                                            <input type="date" class="form-control" placeholder="dd/mm/aaaa">
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;input type=&quot;date&quot; class=&quot;form-control&quot;
+                                                placeholder=&quot;dd/mm/aaaa&quot;&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label for="formNombreVia" class="form-label">Observación</label><br>
+                                            <textarea placeholder="Escribe a continuación..."></textarea>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;textarea placeholder=&quot;Escribe a
+                                                continuaci&oacute;n...&quot;&gt;&lt;/textarea&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Curabitur ullamcorper ultricies</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Default checkbox
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Checked checkbox
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked" disabled>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Disabled checkbox
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked" checked disabled>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Disabled checked checkbox
+                                                </label>
+                                            </div>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;div class=&quot;form-check&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;input class=&quot;form-check-input&quot;
+                                                type=&quot;checkbox&quot; value=&quot;&quot;
+                                                id=&quot;flexCheckDefault&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-check-label&quot;
+                                                for=&quot;flexCheckDefault&quot;&gt; Default checkbox &lt;/label&gt;
+                                                <br>&lt;/div&gt;
+                                                <br>&lt;div class=&quot;form-check&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;input class=&quot;form-check-input&quot;
+                                                type=&quot;checkbox&quot; value=&quot;&quot;
+                                                id=&quot;flexCheckChecked&quot; checked&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-check-label&quot;
+                                                for=&quot;flexCheckChecked&quot;&gt; Checked checkbox &lt;/label&gt;
+                                                <br>&lt;/div&gt;
+                                                <br>&lt;div class=&quot;form-check&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;input class=&quot;form-check-input&quot;
+                                                type=&quot;checkbox&quot; value=&quot;&quot;
+                                                id=&quot;flexCheckChecked&quot; disabled&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-check-label&quot;
+                                                for=&quot;flexCheckChecked&quot;&gt; Disabled checkbox &lt;/label&gt;
+                                                <br>&lt;/div&gt;
+                                                <br>&lt;div class=&quot;form-check&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;input class=&quot;form-check-input&quot;
+                                                type=&quot;checkbox&quot; value=&quot;&quot;
+                                                id=&quot;flexCheckChecked&quot; checked disabled&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;label class=&quot;form-check-label&quot;
+                                                for=&quot;flexCheckChecked&quot;&gt; Disabled checked checkbox
+                                                &lt;/label&gt;
+                                                <br>&lt;/div&gt;
+                                            </span></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="mb-5">
+                                            <label for="formNombreVia" class="form-label">Lorem ipsum</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese lorem ipsum"
+                                                disabled>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+                                                placeholder=&quot;Ingrese lorem ipsum&quot; disabled&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label for="formTipoVia" class="form-label">Tipo vía</label>
+                                            <select class="form-select" id="formTipoVia" disabled>
+                                                <option selected>Seleccione</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;select class=&quot;form-select&quot; id=&quot;formTipoVia&quot;
+                                                disabled&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option selected&gt;Seleccione&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;1&quot;&gt;One&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;2&quot;&gt;Two&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;3&quot;&gt;Three&lt;/option&gt;
+                                                <br>&lt;/select&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5 pb-5">
+                                            <label for="formNombreVia" class="form-label">Fecha</label>
+                                            <input type="date" class="form-control" placeholder="dd/mm/aaaa" disabled>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;input type=&quot;date&quot; class=&quot;form-control&quot;
+                                                placeholder=&quot;dd/mm/aaaa&quot; disabled&gt;</span></div>
+                                        </div><br>
+
+                                        <div class="mb-5">
+                                            <label for="formRut" class="form-label">Rut</label>
+                                            <div class="input-group">
+                                                <span class="w-25">
+                                                    <select class="form-select input-group-text border-no-redondeado"
+                                                        id="formTipoVia">
+                                                        <option selected>RUT</option>
+                                                        <option value="1">Pasaporte</option>
+                                                    </select>
+                                                </span>
+                                                <input type="text" class="form-control"
+                                                    aria-label="Sizing example input"
+                                                    aria-describedby="inputGroup-sizing-default"
+                                                    placeholder="Ingrese rut" autofocus>
+                                            </div>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;div class=&quot;input-group&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;span class=&quot;w-25&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select
+                                                class=&quot;form-select input-group-text border-no-redondeado&quot;
+                                                id=&quot;formTipoVia&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option
+                                                selected&gt;RUT&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option
+                                                value=&quot;1&quot;&gt;Pasaporte&lt;/option&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot;
+                                                class=&quot;form-control&quot; aria-label=&quot;Sizing example
+                                                input&quot; aria-describedby=&quot;inputGroup-sizing-default&quot;
+                                                placeholder=&quot;Ingrese rut&quot; autofocus&gt;
+                                                <br>&lt;/div&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label for="formRut" class="form-label">Select con buscador</label>
+                                            <select class="selectpicker" id="estadoampldropdownlist"
+                                                name="EstadoAmpleacion" data-live-search="true"
+                                                data-none-selected-text="" multiple="multiple">
+                                                <option value=""></option>
+                                                <option value="1">S/I</option>
+                                                <option value="2">Vigente</option>
+                                                <option value="4">Proyectado</option>
+                                                <option value="6">Retirado</option>
+                                                <option value="7">En proceso de término</option>
+                                                <option value="8">No corresponde</option>
+                                            </select>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;select class=&quot;selectpicker&quot; id=&quot;estadoampldropdownlist&quot; name=&quot;EstadoAmpleacion&quot; data-live-search=&quot;true&quot; data-none-selected-text=&quot;&quot; multiple=&quot;multiple&quot;&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;&quot;&gt;&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;1&quot;&gt;S/I&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;2&quot;&gt;Vigente&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;4&quot;&gt;Proyectado&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;6&quot;&gt;Retirado&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;7&quot;&gt;En proceso de t&eacute;rmino&lt;/option&gt; 
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;option value=&quot;8&quot;&gt;No corresponde&lt;/option&gt; 
+                                                <br>&lt;/select&gt;</span></div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label class="form-label">Curabitur ullamcorper ultricies</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">Lorem
+                                                        ipsum</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">Amet sir</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                                                        disabled>
+                                                    <label class="form-check-label" for="inlineRadio2">Disabled
+                                                        radio</label>
+                                                </div>
+                                            </div>
+                                            <p></p>
+                                            <div class="codigo"><span>&lt;div&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;div class=&quot;form-check
+                                                form-check-inline&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+                                                class=&quot;form-check-input&quot; type=&quot;radio&quot;
+                                                name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio1&quot;
+                                                value=&quot;option1&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                                                class=&quot;form-check-label&quot; for=&quot;inlineRadio1&quot;&gt;Lorem
+                                                ipsum&lt;/label&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;div class=&quot;form-check
+                                                form-check-inline&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+                                                class=&quot;form-check-input&quot; type=&quot;radio&quot;
+                                                name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio2&quot;
+                                                value=&quot;option2&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                                                class=&quot;form-check-label&quot; for=&quot;inlineRadio2&quot;&gt;Amet
+                                                sir&lt;/label&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;div class=&quot;form-check
+                                                form-check-inline&quot;&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+                                                class=&quot;form-check-input&quot; type=&quot;radio&quot;
+                                                name=&quot;inlineRadioOptions&quot; id=&quot;inlineRadio3&quot;
+                                                value=&quot;option3&quot; disabled&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                                                class=&quot;form-check-label&quot;
+                                                for=&quot;inlineRadio2&quot;&gt;Disabled radio&lt;/label&gt;
+                                                <br>&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                                <br>&lt;/div&gt;</span></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="mt-3">
+                                        <a class="btn btn-primario">
+                                            <i class="fas fa-arrow-left me-2"></i>
+                                            Volver
+                                        </a>
+                                        <div class="float-end">
+                                            <button class="btn btn-actualizar" type="submit">
+                                                <i class="fas fa-floppy-disk fa-1x"></i>
+                                                Actualizar
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div id="ir-arriba">
+                    <div class="container">
+                        <a>
+                            <i class="btn btn-primario fas fa-chevron-up ir-arriba" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>-->
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="../js/selectpicker.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/subir.js"></script>
+
+    <link href="../js/vendor/dataTables/datatables.min.css" rel="stylesheet" />
+    <script src="../js/vendor/datatables/datatables.min.js"></script>
+
+</body>
+
+</html>

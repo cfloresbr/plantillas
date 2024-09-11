@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />-->
+    <link href="../js/vendor/simple_datatable/style.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@100&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <script src="../js/vendor/fontawesome/fontawesome_all.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar ">
+        <!-- Navbar Brand-->
+        <!--<a class="navbar-brand ps-3" href="../examples/index.html">BR</a>-->
+        <a class="navbar-brand ps-3" href="../examples/index.html">
+            <img class="logobase" src="../img/logo-BR.png">
+            <img class="logosimple" src="../img/logo-simple-BR.png">
+        </a>
+        <!-- Navbar Search-->
+        <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>-->
+        <!-- Navbar-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-2 me-lg-4 ms-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+            <div class="ms-auto me-0 my-3 my-md-0 pr-3">
+                                <button class="float-start btn-ayuda me-1">
+                    <a class="btn-ayuda" href="../examples/ayuda.html">
+                      <i class="fas fa-circle-question fa-fw me-1"></i><span class="d-none d-sm-inline">Ayuda</span> 
+                    </a>
+                </button>
+
+                <ul class="navbar-nav ms-auto ms-md-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-1 nav-user" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fas fa-user fa-fw me-1"></i><span class="d-none d-md-inline">Nombre Apellido</span>
+</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item pe-2" href="../examples/cambiar-contrasena.html"><i class="fas fa-key"></i> Cambiar contraseña</a></li>
+<li><a class="dropdown-item pe-2" href="../examples/preguntas.html"><i class="fas fa-user-lock"></i> Preguntas de seguridad</a></li>
+<!--<li><hr class="dropdown-divider" /></li>-->
+<li><a class="dropdown-item pe-2" href="#!"><i class="fas fa-door-open"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>        
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu sombra-menu-lateral">
+                    <div class="nav margen-menu">
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Core</div>-->
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/index.html">
+                            <i class="fas fa-tachometer-alt sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Dashboard</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/buttons.html">
+                            <i class="fas fa-circle-dot sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Botones</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                            <div class="sb-nav-link-icon"><i class="fas fa-square-check"></i></div>
+                            <span class="text-sidebar">Formularios</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/form1.html">Inputs</a>
+                                <a class="nav-link submenu-opcion" href="../examples/buscador.html">Buscador</a>
+                                <a class="nav-link submenu-opcion" href="../examples/form2.html">Detalle</a>
+                            </nav>
+                        </div>
+                        <!--<a class="nav-link menu-opcion" href="../examples/autoAyuda.html">
+                            <i class="fas fa-question-circle sb-nav-link-icon"></i>
+                            <span class="text-sidebar">AutoAyuda</span>
+                        </a>-->
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Interface</div> -->
+
+                        <!--Principal con submenu
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>                                
+                            <span class="text-sidebar">Diseños</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>-->
+                        <!--Submenu
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link submenu-opcion" href="layout-static.html">Navegación estática</a>
+                                    <a class="nav-link submenu-opcion" href="layout-sidenav-light.html">Ligero desplazamiento</a>
+                                </nav>
+                            </div>-->
+
+                        <!--Separador-->
+                        <!-- <div class="sb-sidenav-menu-heading text-sidebar">Addons</div> -->
+
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/textos.html">
+                            <i class="fas fa-font sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Estilos de textos</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <span class="text-sidebar">Tablas</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseTables" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/tabla-mantenedor.html">Tabla mantenedor</a>
+                                <a class="nav-link submenu-opcion" href="../examples/tables.html">Tablas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/datatables.html">DataTables</a>
+                            </nav>
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMantenedor" aria-expanded="false" aria-controls="collapseMantenedor">
+                            <div class="sb-nav-link-icon"><i class="fas fa-gear"></i></div>
+                            <span class="text-sidebar">Mantenedores</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseMantenedor" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/listadoRegion.html">Ejemplo registros</a>
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseFunciones" aria-expanded="false" aria-controls="pagesCollapseFunciones">
+                                    Operaciones
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <!--sub submenu-->
+                                <div class="collapse" id="pagesCollapseFunciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/crearRegion.html">Crear</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/editarRegion.html">Editar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/eliminarRegion.html">Eliminar</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/desactivarRegion.html">Desactivar</a>
+                                    </nav>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse" data-bs-target="#collapseModals" aria-expanded="false" aria-controls="collapseModals">
+                            <div class="sb-nav-link-icon"><i class="fas fa-window-restore"></i></div>
+                            <span class="text-sidebar">Modales</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseModals" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/modales.html">Modales</a>
+                                <a class="nav-link submenu-opcion" href="../examples/modales-operaciones.html">Alertas</a>
+                                <a class="nav-link submenu-opcion" href="../examples/autoAyuda.html">Autoayuda</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/calendario.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                            <span class="text-sidebar">Calendario</span>
+                        </a>
+                        <!--Principal con submenu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDespliegue" aria-expanded="false"
+                            aria-controls="collapseDespliegue">
+                            <div class="sb-nav-link-icon"><i class="fas fa-caret-square-down"></i></div>
+                            <span class="text-sidebar">Despliegues</span>
+                            <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapseDespliegue" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link submenu-opcion" href="../examples/acordeon.html">Acordeón</a>
+                                <a class="nav-link submenu-opcion" href="../examples/pestanas.html">Pestañas</a>
+                            </nav>
+                        </div>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/notificaciones.html">
+                            <i class="fas fa-bell sb-nav-link-icon"></i>
+                            <span class="text-sidebar">Notificaciones</span>
+                        </a>
+                        <!--Principal-->
+                        <a class="nav-link menu-opcion" href="../examples/charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+
+                            <span class="text-sidebar">Gráficos</span>
+                        </a>
+                        <!--Principal con submenu y sub sub menu-->
+                        <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <span class="text-sidebar">Páginas</span>
+                            <div class="sb-sidenav-collapse-arrow sb-nav-link-icon"><i
+                                    class="fas fa-angle-down text-sidebar"></i></div>
+                        </a>
+                        <!--Submenu-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    Autenticación
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/login.html">Login</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_fail.html">Login error</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/recuperar-clave.html">Recuperar
+                                            Clave</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_secreta.html">Pregunta
+                                            secreta</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_contrasena.html">Cambio
+                                            password</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/login_cambio_ok.html">Cambio
+                                            correcto</a>
+                                    </nav>
+                                </div>
+                                <!-- sub sub menu-->
+                                <a class="nav-link collapsed menu-opcion" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow menu-opcion"><i
+                                            class="fas fa-angle-down text-sidebar"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link submenu-opcion" href="../examples/sesion-caducada.html">Sesión
+                                            caducada</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/404.html">Página 404</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento.html">Mantenimiento</a>
+                                        <a class="nav-link submenu-opcion" href="../examples/mantenimiento-nobr.html">Mantenimiento No BR</a>                                                
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link submenu-opcion" href="../examples/ayuda.html">Ayuda</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sombra-menu-lateral">
+                <div class="sb-sidenav-footer text-center m-0 ">
+                    <span class="smallest text-sidebar-footer mr-2">Un servicio de</span>
+                    <img src="../img/logo-BR-vertical.png" class="img-fluid" alt="Responsive image">
+                </div></div>
+                
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row m-4">
+                        <div class="border-title px-0"> <!--border-title-->
+                            <h1 class="h1-aplicaciones-br">Regiones</h1>
+                        </div>
+
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-crear float-end"><i class="fas fa-circle-plus" aria-hidden="true"></i> Agregar</button>
+                        </div>
+
+                        <div class="contenedor mt-4">
+                            <div class="row no-gutters align-items-center  m-4">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover" id="tabla-dinamica">
+                                            <thead>
+                                                <tr>
+                                                    <th>Código Región</th>
+                                                    <th>Nombre región</th>
+                                                    <th>Opciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td>01</td>
+                                                    <td >Metropolitana</td>
+                                                    <td class="botones-operacion">
+                                                        <div id="opciones" class="btn-group contenedor-botones">
+                                                            <button type="button" class="btn btn-panel-editar mx-1"><i class="fas fa-pen" aria-hidden="true"></i></button>
+                                                            <button type="button" class="btn btn-panel-eliminar mx-1"><i class="fas fa-trash" aria-hidden="true"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+    </div>
+    <script src="../js/vendor/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+
+    <script src="../js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <link href="../js/vendor/dataTables/datatables.min.css" rel="stylesheet" />
+    <script src="../js/vendor/datatables/datatables.min.js"></script>
+    
+    <script src="../js/scripts.js"></script>
+    <link href="../css/tabla.css" rel="stylesheet" />
+    <script src="../js/datatables-demo.js"></script>
+    <script>
+        $(function () {
+
+            var dt = $('#tabla-dinamica').removeClass('display')
+                .addClass('table table-striped').DataTable({
+
+                    /*dom: '<"btn-group float-end filter-dataTable"lf>t<"d-flex justify-content-between "ip>',*/
+                    dom: '<"btn-group float-end filter-dataTable"lfB>t<"contenedor-tabla-footer mt-3 "ip>',
+                    lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+                    pageLength: 10,
+                    language: {
+                        url: 'https://cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json',
+                    },
+                    buttons: [
+                        {
+                            extend: 'pdfHtml5',
+                            text: '<i class="fas fa-file-pdf mx-2"></i><p class="text-center mx-0 my-0 text-boton">Exportar</p>',
+                            titleAttr: 'Exportar datos a PDF',
+                            className: 'btn btn-exportar-2 bg-none mx-2 botones-tabla mb-3 mb-sm-0'
+
+                        },
+                        {
+                            extend: 'excelHtml5',
+                            text: '<i class="fas fa-file-excel mx-2"></i><p class="text-center mx-0 my-0 text-boton">Exportar</p>',
+                            titleAttr: 'Exportar datos a Excel',
+                            className: 'btn btn-exportar bg-none mx-2 botones-tabla'
+                        },
+
+                    ],
+                    
+                    columnDefs: [
+                        {
+                            targets: '_all',
+                            className: 'align-middle'
+                        }
+                    ],
+                    initComplete: function () {
+                        headerDataTable();
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>
